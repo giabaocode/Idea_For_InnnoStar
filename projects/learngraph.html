@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnGraph – INNOSTAR 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/project.css" />
+  </head>
+  <body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <nav class="nav scrolled" id="nav">
+      <div class="nav-inner container">
+        <a href="../index.html" class="nav-brand">◆ INNOSTAR 2026</a>
+        <div class="nav-links">
+          <a href="#problem">Vấn đề</a>
+          <a href="#solution">Giải pháp</a>
+          <a href="#business">Kinh doanh</a>
+          <a href="#tech">Công nghệ</a>
+          <a href="#roadmap">Roadmap</a>
+        </div>
+      </div>
+    </nav>
+
+    <section class="project-hero">
+      <div class="hero-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+      </div>
+      <div class="container project-hero-content">
+        <a href="../index.html" class="back-link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M10 12L6 8l4-4"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+          Quay lại tất cả đề tài
+        </a>
+        <div class="project-badge-row">
+          <span class="project-field-badge">Giáo dục × Career</span>
+          <span class="project-stage-badge">Giai đoạn: Ý tưởng</span>
+        </div>
+        <h1>🗺️ LearnGraph</h1>
+        <p class="project-tagline">
+          Bản đồ năng lực & lộ trình học tập cá nhân hóa – biết mình thiếu gì,
+          học đúng thứ cần.
+        </p>
+        <div class="project-quick-stats">
+          <div class="quick-stat">
+            <span class="quick-stat-val">Freemium + B2B</span
+            ><span class="quick-stat-lbl">Mô hình</span>
+          </div>
+          <div class="quick-stat">
+            <span class="quick-stat-val">Knowledge Graph</span
+            ><span class="quick-stat-lbl">Core Tech</span>
+          </div>
+          <div class="quick-stat">
+            <span class="quick-stat-val">NLP + Crawling</span
+            ><span class="quick-stat-lbl">Data Engine</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="problem" class="content-section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-label-col">
+            <span class="label">01</span>
+            <h3>Vấn đề cần giải quyết</h3>
+          </div>
+          <div class="section-content">
+            <p>
+              Sinh viên Việt Nam không biết mình đang thiếu kỹ năng gì so với
+              yêu cầu thực tế của thị trường lao động. Họ học lan man, đăng ký
+              hàng chục khóa học online nhưng không có định hướng rõ ràng.
+            </p>
+            <p>
+              Các nền tảng hiện tại (Coursera, Udemy, Skillshare) chỉ bán khóa
+              học – không ai "chẩn đoán" năng lực hiện tại rồi vẽ lộ trình cụ
+              thể. Giống như đi khám bệnh mà bác sĩ chỉ bán thuốc, không khám.
+            </p>
+            <p>
+              Kết quả: sinh viên tốn tiền + thời gian học những thứ không cần
+              thiết, trong khi bỏ qua những kỹ năng quan trọng mà nhà tuyển dụng
+              đang tìm kiếm.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" class="content-section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-label-col">
+            <span class="label">02</span>
+            <h3>Giải pháp sáng tạo</h3>
+          </div>
+          <div class="section-content">
+            <p>
+              LearnGraph là nền tảng AI phân tích năng lực hiện tại của sinh
+              viên (CV, transcript, portfolio, GitHub...) → so sánh với yêu cầu
+              thực tế từ hàng nghìn job description → tạo "skill gap map" trực
+              quan → đề xuất lộ trình học tối ưu.
+            </p>
+            <div class="feature-grid">
+              <div class="feature-card">
+                <h4>🔍 Skill Assessment AI</h4>
+                <p>
+                  Upload CV/transcript → AI phân tích và map vào knowledge graph
+                  với 5000+ skills. Xác định level từng skill.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>📊 Gap Visualization</h4>
+                <p>
+                  Skill gap map dạng interactive graph: xanh = đã có, đỏ =
+                  thiếu, vàng = cần nâng cấp. So sánh với dream job.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>🛤️ Personalized Roadmap</h4>
+                <p>
+                  AI tạo lộ trình học tối ưu: học gì, ở đâu, bao lâu. Tính toán
+                  theo thời gian rảnh và deadline mục tiêu.
+                </p>
+              </div>
+              <div class="feature-card">
+                <h4>📈 Progress Tracking</h4>
+                <p>
+                  Theo dõi tiến độ real-time. Cập nhật graph khi hoàn thành khóa
+                  học/project. Celebrate milestones.
+                </p>
+              </div>
+            </div>
+            <p style="margin-top: 20px">
+              <strong>Khác biệt:</strong> Coursera bán khóa học. LinkedIn chỉ
+              show skill. LearnGraph là "GPS cho sự nghiệp" – biết bạn đang ở
+              đâu, muốn đi đâu, và đường nào ngắn nhất.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="business" class="content-section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-label-col">
+            <span class="label">03</span>
+            <h3>Mô hình kinh doanh</h3>
+          </div>
+          <div class="section-content">
+            <div class="biz-grid">
+              <div class="biz-card">
+                <div class="biz-icon">🆓</div>
+                <div class="biz-title">Freemium B2C</div>
+                <div class="biz-desc">
+                  Miễn phí: 1 skill assessment + basic roadmap. Premium
+                  149k/tháng: unlimited, AI coaching, priority updates.
+                </div>
+              </div>
+              <div class="biz-card">
+                <div class="biz-icon">🏫</div>
+                <div class="biz-title">B2B – Trường ĐH</div>
+                <div class="biz-desc">
+                  Dashboard theo dõi năng lực toàn bộ SV. Báo cáo skill gap theo
+                  ngành. Giúp trường cải thiện chương trình.
+                </div>
+              </div>
+              <div class="biz-card">
+                <div class="biz-icon">🤝</div>
+                <div class="biz-title">Affiliate</div>
+                <div class="biz-desc">
+                  Gợi ý khóa học từ Coursera, Udemy, Codecademy... Thu hoa hồng
+                  15-30% mỗi đăng ký.
+                </div>
+              </div>
+            </div>
+            <p style="margin-top: 20px">
+              <strong>Khách hàng:</strong> SV năm 2-4 chuẩn bị đi làm (B2C).
+              Trường ĐH muốn nâng cao employability rate (B2B). Nền tảng khóa
+              học muốn targeted traffic (Affiliate).
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-label-col">
+            <span class="label">04</span>
+            <h3>Tiềm năng thị trường</h3>
+          </div>
+          <div class="section-content">
+            <p>
+              Thị trường career tech toàn cầu đạt $8.5 tỷ (2025), CAGR 12%. Tại
+              VN, 2.6 triệu SV đại học + 1.5 triệu người đang tìm việc/chuyển
+              ngành là đối tượng tiềm năng.
+            </p>
+            <div class="market-highlights">
+              <div class="market-card">
+                <div class="market-val">$8.5B</div>
+                <div class="market-lbl">Career Tech toàn cầu</div>
+              </div>
+              <div class="market-card">
+                <div class="market-val">4.1M</div>
+                <div class="market-lbl">Đối tượng tiềm năng VN</div>
+              </div>
+              <div class="market-card">
+                <div class="market-val">12%</div>
+                <div class="market-lbl">CAGR</div>
+              </div>
+              <div class="market-card">
+                <div class="market-val">0</div>
+                <div class="market-lbl">Đối thủ trực tiếp tại VN</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="tech" class="content-section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-label-col">
+            <span class="label">05</span>
+            <h3>Ứng dụng công nghệ</h3>
+          </div>
+          <div class="section-content">
+            <div class="tech-grid">
+              <div class="tech-item">
+                <div class="tech-icon">🕸️</div>
+                <div>
+                  <div class="tech-name">Knowledge Graph (Neo4j)</div>
+                  <div class="tech-desc">
+                    Graph database chứa 5000+ skills, relationships,
+                    prerequisites. Truy vấn nhanh shortest path.
+                  </div>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon">📝</div>
+                <div>
+                  <div class="tech-name">NLP – CV & JD Analysis</div>
+                  <div class="tech-desc">
+                    BERT/GPT phân tích CV và job description, extract skills,
+                    map vào knowledge graph.
+                  </div>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon">🎯</div>
+                <div>
+                  <div class="tech-name">Recommendation Engine</div>
+                  <div class="tech-desc">
+                    Hybrid filtering: content-based (skill similarity) +
+                    collaborative (người giống bạn học gì).
+                  </div>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon">🕷️</div>
+                <div>
+                  <div class="tech-name">Data Crawling</div>
+                  <div class="tech-desc">
+                    Crawl job platforms (TopCV, LinkedIn, ITviec) để cập nhật
+                    skill demand real-time.
+                  </div>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon">📊</div>
+                <div>
+                  <div class="tech-name">D3.js Visualization</div>
+                  <div class="tech-desc">
+                    Interactive skill graph visualization. Zoom, filter,
+                    compare. Beautiful & intuitive.
+                  </div>
+                </div>
+              </div>
+              <div class="tech-item">
+                <div class="tech-icon">⚡</div>
+                <div>
+                  <div class="tech-name">Next.js + FastAPI</div>
+                  <div class="tech-desc">
+                    Frontend SSR cho SEO. Python backend cho ML pipeline. Redis
+                    cache cho real-time.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-label-col">
+            <span class="label">06</span>
+            <h3>Tác động xã hội</h3>
+          </div>
+          <div class="section-content">
+            <p>
+              <strong>Hiệu quả kinh tế:</strong> Affiliate model + Premium
+              subscription. Dự kiến 100.000 users năm 1, conversion 3-5%.
+              Revenue: 800 triệu – 1.5 tỷ VNĐ/năm.
+            </p>
+            <ul class="impact-list">
+              <li>
+                Giảm thời gian tìm việc trung bình từ 6 tháng xuống 2 tháng nhờ
+                học đúng skill
+              </li>
+              <li>
+                Giúp trường ĐH cải thiện chương trình đào tạo dựa trên data thực
+                tế từ thị trường
+              </li>
+              <li>
+                Dân chủ hóa career guidance: không cần trả tiền career coach đắt
+                đỏ
+              </li>
+              <li>
+                Giảm mismatch giữa đào tạo và nhu cầu lao động – vấn đề lớn của
+                VN
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="content-section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-label-col">
+            <span class="label">07</span>
+            <h3>Roadmap</h3>
+          </div>
+          <div class="section-content">
+            <div class="roadmap">
+              <div class="roadmap-item">
+                <div class="roadmap-phase">Phase 1</div>
+                <div class="roadmap-title">Data & Prototype</div>
+                <div class="roadmap-desc">
+                  Xây dựng knowledge graph (crawl 10.000 JD). Prototype skill
+                  assessment. Test với 100 SV IT.
+                </div>
+                <div class="roadmap-time">Tháng 1 – Tháng 3/2026</div>
+              </div>
+              <div class="roadmap-item">
+                <div class="roadmap-phase">Phase 2</div>
+                <div class="roadmap-title">MVP – Ngành IT</div>
+                <div class="roadmap-desc">
+                  Launch cho ngành IT/CS trước (dễ đo lường skill). Tích hợp
+                  GitHub analysis. 1000 users beta.
+                </div>
+                <div class="roadmap-time">Tháng 4 – Tháng 7/2026</div>
+              </div>
+              <div class="roadmap-item">
+                <div class="roadmap-phase">Phase 3</div>
+                <div class="roadmap-title">Multi-industry Launch</div>
+                <div class="roadmap-desc">
+                  Mở rộng: Marketing, Finance, Design. B2B pilot 3 trường.
+                  Affiliate partnerships.
+                </div>
+                <div class="roadmap-time">Tháng 8 – Tháng 12/2026</div>
+              </div>
+              <div class="roadmap-item">
+                <div class="roadmap-phase">Phase 4</div>
+                <div class="roadmap-title">AI Career Coach</div>
+                <div class="roadmap-desc">
+                  Thêm AI career coaching chatbot. Company matching. Mở rộng
+                  toàn quốc + SEA.
+                </div>
+                <div class="roadmap-time">2027</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="content-section">
+      <div class="container">
+        <div class="section-grid">
+          <div class="section-label-col">
+            <span class="label">08</span>
+            <h3>Năng lực nhóm</h3>
+          </div>
+          <div class="section-content">
+            <div class="team-note">
+              <p>
+                Phần thông tin nhóm sẽ được cập nhật sau khi nhóm xác nhận thành
+                viên.<br /><span class="highlight"
+                  >Vui lòng liên hệ nhóm trưởng để bổ sung thông tin.</span
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer-brand">◆ INNOSTAR 2026</p>
+        <p>LearnGraph – Bản đồ năng lực & lộ trình học tập cá nhân hóa</p>
+        <p class="footer-sub">
+          <a href="../index.html" style="color: var(--blue)"
+            >← Quay lại trang chính</a
+          >
+        </p>
+      </div>
+    </footer>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

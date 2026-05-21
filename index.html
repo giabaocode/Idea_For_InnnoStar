@@ -3,94 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>INNOSTAR 2026 – Đề Xuất Ý Tưởng Khởi Nghiệp Giáo Dục</title>
+    <title>INNOSTAR 2026 – Ý Tưởng Khởi Nghiệp Giáo Dục</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <!-- Cursor glow effect -->
     <div class="cursor-glow" id="cursorGlow"></div>
 
-    <!-- Navigation -->
-    <nav class="navbar" id="navbar">
-      <div class="nav-container">
-        <a href="#" class="nav-logo">
-          <span class="logo-icon">◆</span>
-          INNOSTAR 2026
-        </a>
+    <!-- Nav -->
+    <nav class="nav" id="nav">
+      <div class="nav-inner container">
+        <a href="#" class="nav-brand">◆ INNOSTAR 2026</a>
         <div class="nav-links">
           <a href="#about">Giới thiệu</a>
-          <a href="#projects">Đề tài</a>
-          <a href="#comparison">So sánh</a>
+          <a href="#projects">5 Đề tài</a>
         </div>
       </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Hero -->
+    <header class="hero">
       <div class="hero-particles" id="particles"></div>
-      <div class="hero-content">
-        <div class="hero-eyebrow" data-animate="fade-up">
-          <span class="eyebrow-dot"></span>
+      <div class="hero-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+      </div>
+      <div class="container hero-content">
+        <div class="hero-badge" data-animate="fade-up">
+          <span class="pulse-dot"></span>
           Cuộc thi Ý tưởng Khởi nghiệp Sinh viên 2026
         </div>
         <h1 data-animate="fade-up" data-delay="100">
-          Khi <span class="text-highlight">Công Nghệ</span> gặp<br />
-          <span class="text-highlight">Giáo Dục</span>
+          Khi <span class="gradient-text">Công Nghệ</span><br />kiến tạo
+          <span class="gradient-text">Giáo Dục</span>
         </h1>
         <p class="hero-desc" data-animate="fade-up" data-delay="200">
-          5 ý tưởng khởi nghiệp ứng dụng AI, VR và Big Data để giải quyết những
-          vấn đề thực tế trong giáo dục Việt Nam.
+          5 ý tưởng khởi nghiệp ứng dụng AI, VR/AR và Big Data vào giáo dục.<br />
+          Chọn một đề tài để xem chi tiết bản mô tả dự án đầy đủ.
         </p>
-        <div class="hero-actions" data-animate="fade-up" data-delay="300">
-          <a href="#projects" class="btn btn-primary">
-            <span>Khám phá đề tài</span>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-              <path
-                d="M8 3v10M8 13l4-4M8 13L4 9"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-              />
-            </svg>
-          </a>
-          <a href="#comparison" class="btn btn-ghost">Bảng so sánh</a>
-        </div>
-        <div class="hero-stats" data-animate="fade-up" data-delay="400">
-          <div class="hero-stat">
-            <span class="hero-stat-value" data-count="5">0</span>
-            <span class="hero-stat-label">Đề tài</span>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat">
-            <span class="hero-stat-value" data-count="12">0</span>
-            <span class="hero-stat-label">Công nghệ</span>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat">
-            <span class="hero-stat-value">EdTech</span>
-            <span class="hero-stat-label">Lĩnh vực</span>
-          </div>
-        </div>
+        <a
+          href="#projects"
+          class="btn btn-primary"
+          data-animate="fade-up"
+          data-delay="300"
+        >
+          <span>Xem 5 đề tài</span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <path
+              d="M8 3v10m0 0l4-4m-4 4L4 9"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
+        </a>
       </div>
-      <div class="hero-scroll">
-        <div class="scroll-indicator">
-          <div class="scroll-dot"></div>
-        </div>
+      <div class="scroll-hint">
+        <div class="scroll-mouse"><div class="scroll-dot"></div></div>
       </div>
-    </section>
+    </header>
 
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- About -->
+    <section id="about" class="section about">
       <div class="container">
         <div class="about-grid">
           <div class="about-text" data-animate="fade-right">
-            <span class="section-label">Bối cảnh</span>
+            <span class="label">Bối cảnh</span>
             <h2>Tại sao Giáo dục cần Công nghệ?</h2>
             <p>
               Thị trường EdTech Việt Nam đang bùng nổ với tốc độ tăng trưởng
@@ -103,514 +87,149 @@
               sự khác biệt.
             </p>
           </div>
-          <div class="about-cards" data-animate="fade-left">
-            <div class="info-card">
-              <div class="info-card-icon">📊</div>
-              <div class="info-card-content">
-                <h4>$3.2 tỷ</h4>
-                <p>Quy mô thị trường EdTech VN 2026</p>
-              </div>
+          <div class="about-stats" data-animate="fade-left">
+            <div class="stat-card">
+              <div class="stat-val">$3.2B</div>
+              <div class="stat-lbl">Thị trường EdTech VN 2026</div>
             </div>
-            <div class="info-card">
-              <div class="info-card-icon">🎓</div>
-              <div class="info-card-content">
-                <h4>26 triệu+</h4>
-                <p>Học sinh, sinh viên Việt Nam</p>
-              </div>
+            <div class="stat-card">
+              <div class="stat-val">26M+</div>
+              <div class="stat-lbl">Học sinh, sinh viên</div>
             </div>
-            <div class="info-card">
-              <div class="info-card-icon">⚡</div>
-              <div class="info-card-content">
-                <h4>70%</h4>
-                <p>SV ra trường thiếu kỹ năng thực tế</p>
-              </div>
+            <div class="stat-card">
+              <div class="stat-val">45%</div>
+              <div class="stat-lbl">Tăng trưởng/năm</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-val">70%</div>
+              <div class="stat-lbl">SV thiếu kỹ năng thực tế</div>
             </div>
           </div>
         </div>
       </div>
     </section>
-  </body>
-</html>
 
-<!-- Projects Section -->
-<section id="projects" class="projects">
-  <div class="container">
-    <div class="section-header" data-animate="fade-up">
-      <span class="section-label">Đề xuất</span>
-      <h2>5 Ý Tưởng Khởi Nghiệp</h2>
-      <p class="section-desc">
-        Mỗi đề tài giải quyết một pain point cụ thể, có mô hình kinh doanh rõ
-        ràng và khả năng triển khai thực tế.
-      </p>
-    </div>
-
-    <!-- Project 1 -->
-    <article class="project" data-animate="fade-up">
-      <div class="project-visual">
-        <div class="project-num">01</div>
-        <div class="project-icon-wrap">
-          <div class="project-icon-bg"></div>
-          <span class="project-emoji">🤖</span>
-        </div>
-        <span class="project-badge badge-recommend">Khuyến nghị</span>
-      </div>
-      <div class="project-info">
-        <h3>AI Peer Tutor</h3>
-        <p class="project-subtitle">
-          Gia sư AI cá nhân hóa theo phong cách học
-        </p>
-
-        <div class="project-details">
-          <div class="detail-block">
-            <h5>Vấn đề</h5>
-            <p>
-              Sinh viên học theo kiểu "one-size-fits-all". Gia sư thật đắt đỏ,
-              chatbot AI hiện tại trả lời chung chung, không hiểu cách mỗi người
-              tiếp thu kiến thức.
-            </p>
-          </div>
-          <div class="detail-block">
-            <h5>Giải pháp</h5>
-            <p>
-              AI phân tích learning style qua bài test + hành vi, tự động điều
-              chỉnh phương pháp giảng dạy (video, sơ đồ, flashcard, bài tập).
-              Kết hợp spaced repetition + adaptive testing.
-            </p>
-          </div>
-          <div class="detail-block">
-            <h5>Kinh doanh</h5>
-            <p>Freemium cho cá nhân + B2B license cho trường đại học.</p>
-          </div>
+    <!-- Projects Grid -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <div class="section-head" data-animate="fade-up">
+          <span class="label">Đề xuất</span>
+          <h2>Chọn một đề tài để xem chi tiết</h2>
+          <p>
+            Mỗi trang chứa đầy đủ thông tin theo yêu cầu của Ban Tổ Chức
+            INNOSTAR 2026
+          </p>
         </div>
 
-        <div class="project-tech">
-          <span>LLM API</span>
-          <span>NLP</span>
-          <span>Learning Analytics</span>
-          <span>Recommendation System</span>
-        </div>
+        <div class="projects-grid">
+          <a
+            href="projects/ai-peer-tutor.html"
+            class="project-card"
+            data-animate="fade-up"
+            data-delay="0"
+          >
+            <div class="card-glow"></div>
+            <div class="card-number">01</div>
+            <div class="card-icon">🤖</div>
+            <h3>AI Peer Tutor</h3>
+            <p>Gia sư AI cá nhân hóa theo phong cách học của từng sinh viên</p>
+            <div class="card-tags">
+              <span>LLM</span><span>NLP</span><span>Adaptive Learning</span>
+            </div>
+            <div class="card-badge badge-green">Khuyến nghị</div>
+            <div class="card-arrow">→</div>
+          </a>
 
-        <div class="project-scores">
-          <div class="score">
-            <span class="score-label">Khả thi</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="100"></div>
+          <a
+            href="projects/skillbridge.html"
+            class="project-card"
+            data-animate="fade-up"
+            data-delay="100"
+          >
+            <div class="card-glow"></div>
+            <div class="card-number">02</div>
+            <div class="card-icon">🌉</div>
+            <h3>SkillBridge</h3>
+            <p>Kết nối sinh viên với doanh nghiệp qua micro-project thực tế</p>
+            <div class="card-tags">
+              <span>AI Matching</span><span>Blockchain</span
+              ><span>Gamification</span>
             </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Tính mới</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="80"></div>
-            </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Tác động</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="80"></div>
-            </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Dễ demo</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="100"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
+            <div class="card-arrow">→</div>
+          </a>
 
-    <!-- Project 2 -->
-    <article class="project" data-animate="fade-up">
-      <div class="project-visual">
-        <div class="project-num">02</div>
-        <div class="project-icon-wrap">
-          <div class="project-icon-bg"></div>
-          <span class="project-emoji">🌉</span>
-        </div>
-      </div>
-      <div class="project-info">
-        <h3>SkillBridge</h3>
-        <p class="project-subtitle">
-          Kết nối sinh viên – doanh nghiệp qua micro-project
-        </p>
+          <a
+            href="projects/edumentor-vr.html"
+            class="project-card"
+            data-animate="fade-up"
+            data-delay="200"
+          >
+            <div class="card-glow"></div>
+            <div class="card-number">03</div>
+            <div class="card-icon">🥽</div>
+            <h3>EduMentor VR</h3>
+            <p>Phòng thí nghiệm ảo cho sinh viên ngành khoa học</p>
+            <div class="card-tags">
+              <span>WebXR</span><span>Three.js</span><span>AI Voice</span>
+            </div>
+            <div class="card-badge badge-orange">Sáng tạo nhất</div>
+            <div class="card-arrow">→</div>
+          </a>
 
-        <div class="project-details">
-          <div class="detail-block">
-            <h5>Vấn đề</h5>
-            <p>
-              Khoảng cách giữa "học" và "làm" quá lớn. Doanh nghiệp nhỏ cần
-              người làm task ngắn hạn nhưng không muốn tuyển intern dài hạn.
-            </p>
-          </div>
-          <div class="detail-block">
-            <h5>Giải pháp</h5>
-            <p>
-              Marketplace micro-project (2-4 tuần). AI matching sinh viên phù
-              hợp. Blockchain ghi nhận credential không thể giả mạo.
-              Gamification tạo động lực.
-            </p>
-          </div>
-          <div class="detail-block">
-            <h5>Kinh doanh</h5>
-            <p>
-              Commission 10-15% từ doanh nghiệp + subscription premium cho sinh
-              viên.
-            </p>
-          </div>
-        </div>
+          <a
+            href="projects/learngraph.html"
+            class="project-card"
+            data-animate="fade-up"
+            data-delay="300"
+          >
+            <div class="card-glow"></div>
+            <div class="card-number">04</div>
+            <div class="card-icon">🗺️</div>
+            <h3>LearnGraph</h3>
+            <p>Bản đồ năng lực & lộ trình học tập cá nhân hóa bằng AI</p>
+            <div class="card-tags">
+              <span>Knowledge Graph</span><span>NLP</span><span>Crawling</span>
+            </div>
+            <div class="card-badge badge-green">Khuyến nghị</div>
+            <div class="card-arrow">→</div>
+          </a>
 
-        <div class="project-tech">
-          <span>AI Matching</span>
-          <span>Blockchain</span>
-          <span>Verifiable Credentials</span>
-          <span>Gamification</span>
-        </div>
-
-        <div class="project-scores">
-          <div class="score">
-            <span class="score-label">Khả thi</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="80"></div>
+          <a
+            href="projects/classpulse.html"
+            class="project-card"
+            data-animate="fade-up"
+            data-delay="400"
+          >
+            <div class="card-glow"></div>
+            <div class="card-number">05</div>
+            <div class="card-icon">📡</div>
+            <h3>ClassPulse</h3>
+            <p>Đo lường & nâng cao chất lượng giảng dạy real-time</p>
+            <div class="card-tags">
+              <span>WebSocket</span><span>Sentiment AI</span
+              ><span>Predictive</span>
             </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Tính mới</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="80"></div>
-            </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Tác động</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="100"></div>
-            </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Dễ demo</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="80"></div>
-            </div>
-          </div>
+            <div class="card-arrow">→</div>
+          </a>
         </div>
       </div>
-    </article>
-
-    <!-- Project 3 -->
-    <article class="project" data-animate="fade-up">
-      <div class="project-visual">
-        <div class="project-num">03</div>
-        <div class="project-icon-wrap">
-          <div class="project-icon-bg"></div>
-          <span class="project-emoji">🥽</span>
-        </div>
-        <span class="project-badge badge-creative">Sáng tạo nhất</span>
-      </div>
-      <div class="project-info">
-        <h3>EduMentor VR</h3>
-        <p class="project-subtitle">
-          Phòng thí nghiệm ảo cho sinh viên ngành khoa học
-        </p>
-
-        <div class="project-details">
-          <div class="detail-block">
-            <h5>Vấn đề</h5>
-            <p>
-              Nhiều trường thiếu phòng thí nghiệm, thiết bị đắt tiền. Sinh viên
-              y khoa, hóa học, kỹ thuật không được thực hành đủ.
-            </p>
-          </div>
-          <div class="detail-block">
-            <h5>Giải pháp</h5>
-            <p>
-              VR/AR mô phỏng phòng thí nghiệm với AI instructor real-time. Chạy
-              trên điện thoại qua WebXR – không cần kính VR đắt tiền.
-            </p>
-          </div>
-          <div class="detail-block">
-            <h5>Kinh doanh</h5>
-            <p>B2B license cho trường + B2G hợp tác Sở GD&ĐT chuyển đổi số.</p>
-          </div>
-        </div>
-
-        <div class="project-tech">
-          <span>WebXR</span>
-          <span>Three.js</span>
-          <span>AI Voice</span>
-          <span>Computer Vision</span>
-          <span>Hand Tracking</span>
-        </div>
-
-        <div class="project-scores">
-          <div class="score">
-            <span class="score-label">Khả thi</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="60"></div>
-            </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Tính mới</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="100"></div>
-            </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Tác động</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="100"></div>
-            </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Dễ demo</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="60"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Project 4 -->
-    <article class="project" data-animate="fade-up">
-      <div class="project-visual">
-        <div class="project-num">04</div>
-        <div class="project-icon-wrap">
-          <div class="project-icon-bg"></div>
-          <span class="project-emoji">🗺️</span>
-        </div>
-        <span class="project-badge badge-recommend">Khuyến nghị</span>
-      </div>
-      <div class="project-info">
-        <h3>LearnGraph</h3>
-        <p class="project-subtitle">
-          Bản đồ năng lực & lộ trình học tập cá nhân hóa
-        </p>
-
-        <div class="project-details">
-          <div class="detail-block">
-            <h5>Vấn đề</h5>
-            <p>
-              Sinh viên không biết mình thiếu kỹ năng gì so với thị trường. Học
-              lan man, không định hướng. Nền tảng hiện tại chỉ bán khóa học,
-              không "chẩn đoán" năng lực.
-            </p>
-          </div>
-          <div class="detail-block">
-            <h5>Giải pháp</h5>
-            <p>
-              AI phân tích CV + transcript → so sánh với job description thực tế
-              → tạo skill gap map dạng graph → đề xuất lộ trình học tối ưu theo
-              mục tiêu nghề nghiệp.
-            </p>
-          </div>
-          <div class="detail-block">
-            <h5>Kinh doanh</h5>
-            <p>
-              Freemium + B2B dashboard cho trường + Affiliate với nền tảng khóa
-              học.
-            </p>
-          </div>
-        </div>
-
-        <div class="project-tech">
-          <span>Knowledge Graph</span>
-          <span>NLP</span>
-          <span>Recommendation Engine</span>
-          <span>Data Crawling</span>
-        </div>
-
-        <div class="project-scores">
-          <div class="score">
-            <span class="score-label">Khả thi</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="100"></div>
-            </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Tính mới</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="80"></div>
-            </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Tác động</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="80"></div>
-            </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Dễ demo</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="80"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-
-    <!-- Project 5 -->
-    <article class="project" data-animate="fade-up">
-      <div class="project-visual">
-        <div class="project-num">05</div>
-        <div class="project-icon-wrap">
-          <div class="project-icon-bg"></div>
-          <span class="project-emoji">📡</span>
-        </div>
-      </div>
-      <div class="project-info">
-        <h3>ClassPulse</h3>
-        <p class="project-subtitle">Đo lường chất lượng giảng dạy real-time</p>
-
-        <div class="project-details">
-          <div class="detail-block">
-            <h5>Vấn đề</h5>
-            <p>
-              Giảng viên không biết sinh viên có hiểu bài không cho đến khi thi.
-              Khảo sát cuối kỳ quá muộn. Không có feedback loop nhanh.
-            </p>
-          </div>
-          <div class="detail-block">
-            <h5>Giải pháp</h5>
-            <p>
-              Anonymous feedback real-time trong lớp. AI phân tích sentiment +
-              engagement → gợi ý giảng viên điều chỉnh ngay. Predictive model dự
-              đoán SV có nguy cơ rớt.
-            </p>
-          </div>
-          <div class="detail-block">
-            <h5>Kinh doanh</h5>
-            <p>
-              SaaS B2B cho trường (subscription theo quy mô). Gói miễn phí cho
-              giảng viên cá nhân.
-            </p>
-          </div>
-        </div>
-
-        <div class="project-tech">
-          <span>WebSocket</span>
-          <span>Sentiment Analysis</span>
-          <span>Predictive ML</span>
-          <span>Dashboard BI</span>
-        </div>
-
-        <div class="project-scores">
-          <div class="score">
-            <span class="score-label">Khả thi</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="100"></div>
-            </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Tính mới</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="80"></div>
-            </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Tác động</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="80"></div>
-            </div>
-          </div>
-          <div class="score">
-            <span class="score-label">Dễ demo</span>
-            <div class="score-bar">
-              <div class="score-fill" data-width="100"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </article>
-  </div>
-</section>
-
-    <!-- Comparison Section -->
-    <section id="comparison" class="comparison">
-        <div class="container">
-            <div class="section-header" data-animate="fade-up">
-                <span class="section-label">Phân tích</span>
-                <h2>So Sánh Tổng Quan</h2>
-            </div>
-            <div class="comparison-grid" data-animate="fade-up">
-                <div class="comp-card">
-                    <div class="comp-header">
-                        <span class="comp-emoji">🤖</span>
-                        <h4>AI Peer Tutor</h4>
-                        <span class="comp-badge badge-recommend">Top pick</span>
-                    </div>
-                    <div class="comp-bars">
-                        <div class="comp-row"><span>Khả thi</span><div class="comp-bar"><div class="comp-fill" style="width:100%"></div></div></div>
-                        <div class="comp-row"><span>Tính mới</span><div class="comp-bar"><div class="comp-fill" style="width:80%"></div></div></div>
-                        <div class="comp-row"><span>Tác động</span><div class="comp-bar"><div class="comp-fill" style="width:80%"></div></div></div>
-                        <div class="comp-row"><span>Demo</span><div class="comp-bar"><div class="comp-fill" style="width:100%"></div></div></div>
-                    </div>
-                </div>
-                <div class="comp-card">
-                    <div class="comp-header">
-                        <span class="comp-emoji">🌉</span>
-                        <h4>SkillBridge</h4>
-                    </div>
-                    <div class="comp-bars">
-                        <div class="comp-row"><span>Khả thi</span><div class="comp-bar"><div class="comp-fill" style="width:80%"></div></div></div>
-                        <div class="comp-row"><span>Tính mới</span><div class="comp-bar"><div class="comp-fill" style="width:80%"></div></div></div>
-                        <div class="comp-row"><span>Tác động</span><div class="comp-bar"><div class="comp-fill" style="width:100%"></div></div></div>
-                        <div class="comp-row"><span>Demo</span><div class="comp-bar"><div class="comp-fill" style="width:80%"></div></div></div>
-                    </div>
-                </div>
-                <div class="comp-card">
-                    <div class="comp-header">
-                        <span class="comp-emoji">🥽</span>
-                        <h4>EduMentor VR</h4>
-                        <span class="comp-badge badge-creative">Wow factor</span>
-                    </div>
-                    <div class="comp-bars">
-                        <div class="comp-row"><span>Khả thi</span><div class="comp-bar"><div class="comp-fill" style="width:60%"></div></div></div>
-                        <div class="comp-row"><span>Tính mới</span><div class="comp-bar"><div class="comp-fill" style="width:100%"></div></div></div>
-                        <div class="comp-row"><span>Tác động</span><div class="comp-bar"><div class="comp-fill" style="width:100%"></div></div></div>
-                        <div class="comp-row"><span>Demo</span><div class="comp-bar"><div class="comp-fill" style="width:60%"></div></div></div>
-                    </div>
-                </div>
-                <div class="comp-card">
-                    <div class="comp-header">
-                        <span class="comp-emoji">🗺️</span>
-                        <h4>LearnGraph</h4>
-                        <span class="comp-badge badge-recommend">Top pick</span>
-                    </div>
-                    <div class="comp-bars">
-                        <div class="comp-row"><span>Khả thi</span><div class="comp-bar"><div class="comp-fill" style="width:100%"></div></div></div>
-                        <div class="comp-row"><span>Tính mới</span><div class="comp-bar"><div class="comp-fill" style="width:80%"></div></div></div>
-                        <div class="comp-row"><span>Tác động</span><div class="comp-bar"><div class="comp-fill" style="width:80%"></div></div></div>
-                        <div class="comp-row"><span>Demo</span><div class="comp-bar"><div class="comp-fill" style="width:80%"></div></div></div>
-                    </div>
-                </div>
-                <div class="comp-card">
-                    <div class="comp-header">
-                        <span class="comp-emoji">📡</span>
-                        <h4>ClassPulse</h4>
-                    </div>
-                    <div class="comp-bars">
-                        <div class="comp-row"><span>Khả thi</span><div class="comp-bar"><div class="comp-fill" style="width:100%"></div></div></div>
-                        <div class="comp-row"><span>Tính mới</span><div class="comp-bar"><div class="comp-fill" style="width:80%"></div></div></div>
-                        <div class="comp-row"><span>Tác động</span><div class="comp-bar"><div class="comp-fill" style="width:80%"></div></div></div>
-                        <div class="comp-row"><span>Demo</span><div class="comp-bar"><div class="comp-fill" style="width:100%"></div></div></div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="logo-icon">◆</span> INNOSTAR 2026
-                </div>
-                <p>Cuộc thi Ý tưởng Khởi nghiệp Sinh viên – TP.HCM</p>
-                <p class="footer-meta">Lĩnh vực: Giáo dục × Công nghệ &nbsp;|&nbsp; Chủ đề: Ứng dụng KHCN vào Kinh doanh Thời đại số</p>
-            </div>
-        </div>
+      <div class="container">
+        <p class="footer-brand">◆ INNOSTAR 2026</p>
+        <p>
+          Cuộc thi Ý tưởng Khởi nghiệp Sinh viên – Trung tâm Khởi nghiệp Sáng
+          tạo TP.HCM
+        </p>
+        <p class="footer-sub">
+          Lĩnh vực: Giáo dục × Công nghệ &nbsp;|&nbsp; Ứng dụng KHCN vào Kinh
+          doanh Thời đại số
+        </p>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <script src="js/main.js"></script>
+  </body>
 </html>
