@@ -7,17 +7,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/project.css" />
   </head>
   <body>
+    <div class="bg-grid"></div>
+    <div class="bg-gradient"></div>
     <div class="cursor-glow" id="cursorGlow"></div>
+
     <nav class="nav scrolled" id="nav">
       <div class="nav-inner container">
-        <a href="../index.html" class="nav-brand">◆ INNOSTAR 2026</a>
+        <a href="../index.html" class="nav-brand">
+          <svg
+            class="brand-logo"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+          >
+            <path
+              d="M14 2L2 8.5V19.5L14 26L26 19.5V8.5L14 2Z"
+              stroke="url(#g1)"
+              stroke-width="2"
+            />
+            <path d="M14 10L8 13V19L14 22L20 19V13L14 10Z" fill="url(#g1)" />
+            <defs>
+              <linearGradient id="g1" x1="2" y1="2" x2="26" y2="26">
+                <stop stop-color="#4f8fff" />
+                <stop offset="1" stop-color="#8b5cf6" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>INNOSTAR 2026</span>
+        </a>
         <div class="nav-links">
           <a href="#problem">Vấn đề</a>
           <a href="#solution">Giải pháp</a>
@@ -28,13 +53,15 @@
       </div>
     </nav>
 
+    <!-- Hero -->
     <section class="project-hero">
-      <div class="hero-orbs">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
+      <div class="hero-floating">
+        <div class="float-shape shape-1"></div>
+        <div class="float-shape shape-2"></div>
+        <div class="float-shape shape-3"></div>
       </div>
       <div class="container project-hero-content">
-        <a href="../index.html" class="back-link">
+        <a href="../index.html" class="back-link" data-animate="fade-up">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path
               d="M10 12L6 8l4-4"
@@ -45,354 +72,646 @@
           </svg>
           Quay lại tất cả đề tài
         </a>
-        <div class="project-badge-row">
-          <span class="project-field-badge">Giáo dục × Analytics</span>
-          <span class="project-stage-badge">Giai đoạn: Ý tưởng</span>
+        <div class="badge-row" data-animate="fade-up" data-delay="50">
+          <span class="p-badge p-badge-blue">Giáo dục × Analytics</span>
+          <span class="p-badge p-badge-green">Giai đoạn: Ý tưởng</span>
         </div>
-        <h1>📡 ClassPulse</h1>
-        <p class="project-tagline">
-          Đo lường & nâng cao chất lượng giảng dạy real-time – feedback loop
-          nhanh giữa thầy và trò.
+        <h1 data-animate="fade-up" data-delay="100">📡 ClassPulse</h1>
+        <p class="project-tagline" data-animate="fade-up" data-delay="150">
+          Đo lường & nâng cao chất lượng giảng dạy real-time – Biến mỗi buổi
+          giảng thành cơ hội cải thiện.
         </p>
-        <div class="project-quick-stats">
-          <div class="quick-stat">
-            <span class="quick-stat-val">SaaS B2B</span
-            ><span class="quick-stat-lbl">Mô hình</span>
+        <div class="quick-stats" data-animate="fade-up" data-delay="200">
+          <div class="qs-item">
+            <span class="qs-val">Free + SaaS B2B</span
+            ><span class="qs-lbl">Mô hình</span>
           </div>
-          <div class="quick-stat">
-            <span class="quick-stat-val">NLP + ML</span
-            ><span class="quick-stat-lbl">Core Tech</span>
+          <div class="qs-item">
+            <span class="qs-val">NLP + ML</span
+            ><span class="qs-lbl">Core Tech</span>
           </div>
-          <div class="quick-stat">
-            <span class="quick-stat-val">Real-time</span
-            ><span class="quick-stat-lbl">Feedback</span>
+          <div class="qs-item">
+            <span class="qs-val">70K GV</span
+            ><span class="qs-lbl">Giảng viên VN</span>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="problem" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">01</span>
-            <h3>Vấn đề cần giải quyết</h3>
-          </div>
-          <div class="section-content">
-            <p>
-              Giảng viên không biết sinh viên có hiểu bài hay không cho đến
-              khi... thi. Khảo sát cuối kỳ thì quá muộn để thay đổi. Không có
-              feedback loop nhanh giữa người dạy và người học.
-            </p>
-            <p>
-              Tỷ lệ sinh viên "ngồi nhưng không hiểu" lên đến 40-60% trong các
-              lớp đông (100+ SV). Giảng viên không thể quan sát từng người. Sinh
-              viên ngại hỏi trước đám đông.
-            </p>
-            <p>
-              Trường đại học không có data real-time về chất lượng giảng dạy.
-              Quyết định dựa trên khảo sát cuối kỳ (response rate chỉ 20-30%) –
-              thiếu chính xác và quá trễ.
-            </p>
+          <div class="qs-item">
+            <span class="qs-val">$7.3B</span
+            ><span class="qs-lbl">Learning Analytics 2027</span>
           </div>
         </div>
       </div>
     </section>
+  </body>
+</html>
 
-    <section id="solution" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">02</span>
-            <h3>Giải pháp sáng tạo</h3>
-          </div>
-          <div class="section-content">
+<!-- Tóm tắt -->
+<section class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">Tổng quan</span>
+        <h3>Tóm tắt dự án</h3>
+        <p>Mô tả ngắn gọn về ý tưởng và mục tiêu</p>
+      </div>
+      <div class="p-content">
+        <p>
+          <strong>Sản phẩm:</strong> Nền tảng đo lường và phân tích chất lượng
+          giảng dạy real-time, sử dụng NLP Sentiment Analysis để đánh giá mức độ
+          hiểu bài của sinh viên, Predictive ML để cảnh báo sớm vấn đề, và
+          Dashboard BI trực quan cho giảng viên và ban giám hiệu.
+        </p>
+        <p>
+          <strong>Tóm tắt:</strong> ClassPulse giải quyết vấn đề "giảng viên
+          không biết sinh viên có hiểu không" bằng cách thu thập feedback ẩn
+          danh real-time, phân tích sentiment từ phản hồi, và cung cấp insights
+          actionable ngay trong buổi giảng. Không phải đợi đến cuối kỳ mới biết
+          chất lượng giảng dạy – biết ngay, sửa ngay.
+        </p>
+        <p>
+          <strong>Mục tiêu lớn nhất:</strong> Mỗi buổi giảng đều tốt hơn buổi
+          trước. Tạo vòng lặp cải tiến liên tục (continuous improvement loop)
+          cho giảng dạy đại học – biến teaching từ "nghệ thuật" thành "khoa học"
+          có đo lường được.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vấn đề -->
+<section id="problem" class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">01</span>
+        <h3>Vấn đề cần giải quyết</h3>
+        <p>Pain point thực tế trong đảm bảo chất lượng giảng dạy</p>
+      </div>
+      <div class="p-content">
+        <p>
+          Tại Việt Nam, đánh giá chất lượng giảng dạy chỉ diễn ra
+          <strong>1-2 lần/năm</strong> qua khảo sát cuối kỳ. Kết quả đến tay
+          giảng viên sau 2-3 tháng – quá muộn để thay đổi.
+          <strong>85% giảng viên</strong> cho biết không nhận được feedback kịp
+          thời để cải thiện.
+        </p>
+        <p>
+          Lớp học 80-200 sinh viên: giảng viên không thể biết ai đang hiểu, ai
+          đang lost. Sinh viên Việt Nam có văn hóa <strong>"ngại hỏi"</strong> –
+          chỉ 5-10% dám giơ tay hỏi khi không hiểu. Phần còn lại im lặng và tích
+          tụ lỗ hổng kiến thức.
+        </p>
+        <p>
+          Ban giám hiệu thiếu data để đánh giá chất lượng giảng dạy khách quan.
+          Quyết định dựa trên cảm tính hoặc khảo sát cuối kỳ có bias (SV đánh
+          giá dựa trên điểm số, không phải chất lượng thực). Không có hệ thống
+          <strong>early warning</strong> cho các lớp có vấn đề.
+        </p>
+        <p>
+          <strong>Tóm lại:</strong> Chất lượng giảng dạy ĐH Việt Nam thiếu hệ
+          thống đo lường real-time, feedback loop quá chậm, và không có công cụ
+          giúp giảng viên cải thiện liên tục. Kết quả: chất lượng đào tạo không
+          đồng đều và khó kiểm soát.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Giải pháp + Value Proposition Canvas -->
+<section id="solution" class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">02</span>
+        <h3>Giải pháp sáng tạo</h3>
+        <p>Tính đột phá và khác biệt so với thị trường</p>
+      </div>
+      <div class="p-content">
+        <p>
+          ClassPulse tạo ra một <strong>continuous feedback loop</strong> trong
+          giảng dạy: SV gửi feedback ẩn danh real-time →
+          <strong>NLP Sentiment Analysis</strong> phân tích mức độ hiểu bài →
+          Dashboard hiển thị cho GV ngay lập tức → GV điều chỉnh →
+          <strong>Predictive ML</strong> cảnh báo sớm các vấn đề tiềm ẩn. Tất cả
+          tích hợp vào LMS hiện tại của trường.
+        </p>
+
+        <div class="feat-grid">
+          <div class="feat-card">
+            <h4>📊 Real-time Pulse Check</h4>
             <p>
-              ClassPulse là hệ thống feedback real-time trong lớp học. Sinh viên
-              gửi anonymous signal (hiểu/không hiểu/quá nhanh/quá chậm) +
-              comment ngắn. AI phân tích và gợi ý giảng viên điều chỉnh ngay lập
-              tức.
+              SV tap 1 nút trên điện thoại: "Hiểu" / "Chưa rõ" / "Không hiểu".
+              GV thấy ngay tỷ lệ trên dashboard. Ẩn danh 100% – SV thoải mái
+              phản hồi thật.
             </p>
-            <div class="feature-grid">
-              <div class="feature-card">
-                <h4>🚦 Real-time Pulse</h4>
-                <p>
-                  SV tap 1 nút trên điện thoại: 😊 Hiểu / 😐 Bình thường / 😵
-                  Không hiểu. Giảng viên thấy ngay trên dashboard.
-                </p>
+          </div>
+          <div class="feat-card">
+            <h4>🧠 NLP Sentiment Analysis</h4>
+            <p>
+              Phân tích text feedback tiếng Việt: phát hiện confusion,
+              frustration, boredom, engagement. Tự động categorize vấn đề:
+              "không hiểu concept X", "đi quá nhanh", "cần ví dụ thêm".
+            </p>
+          </div>
+          <div class="feat-card">
+            <h4>⚠️ Predictive Early Warning</h4>
+            <p>
+              ML model dự đoán: lớp nào sắp có vấn đề (drop rate cao, engagement
+              giảm). Cảnh báo ban giám hiệu trước 2-3 tuần. Suggest intervention
+              cụ thể.
+            </p>
+          </div>
+          <div class="feat-card">
+            <h4>📈 Teaching Analytics Dashboard</h4>
+            <p>
+              Dashboard BI cho GV: trend engagement theo thời gian, so sánh giữa
+              các buổi, topic nào khó nhất, thời điểm nào SV mất tập trung.
+              Actionable insights.
+            </p>
+          </div>
+          <div class="feat-card">
+            <h4>🎯 AI Teaching Suggestions</h4>
+            <p>
+              Dựa trên data, AI gợi ý: "Nên thêm ví dụ cho topic X", "Giảm tốc
+              độ ở phần Y", "SV thích format thảo luận nhóm hơn lecture".
+              Personalized cho từng GV.
+            </p>
+          </div>
+          <div class="feat-card">
+            <h4>🔌 LMS Integration</h4>
+            <p>
+              Tích hợp seamless với Moodle, Canvas, Google Classroom. SSO, grade
+              sync, attendance tracking. GV không cần thay đổi workflow –
+              ClassPulse chạy ngầm.
+            </p>
+          </div>
+        </div>
+
+        <p style="margin-top: 20px">
+          <strong>Khác biệt so với thị trường:</strong> Mentimeter/Kahoot chỉ là
+          polling tool, không có analytics. Google Forms là khảo sát cuối kỳ,
+          không real-time. ClassPulse: real-time + NLP sentiment + predictive ML
+          + teaching suggestions + LMS integration. Giải pháp toàn diện cho
+          quality assurance giảng dạy.
+        </p>
+
+        <!-- Value Proposition Canvas -->
+        <div class="canvas-section">
+          <div class="canvas-title">Value Proposition Canvas</div>
+          <div class="vpc">
+            <div class="vpc-side">
+              <div class="vpc-side-label">🎁 Value Map (Giá trị cung cấp)</div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Products & Services</div>
+                <ul>
+                  <li>Real-time pulse check (1-tap feedback)</li>
+                  <li>NLP sentiment analysis tiếng Việt</li>
+                  <li>Predictive early warning system</li>
+                  <li>Teaching analytics dashboard (BI)</li>
+                  <li>AI teaching improvement suggestions</li>
+                </ul>
               </div>
-              <div class="feature-card">
-                <h4>💬 Anonymous Q&A</h4>
-                <p>
-                  SV gửi câu hỏi ẩn danh. AI gom nhóm câu hỏi tương tự. Upvote
-                  để ưu tiên. Giảng viên trả lời top questions.
-                </p>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Pain Relievers</div>
+                <ul>
+                  <li>Biết ngay SV có hiểu không – không đợi cuối kỳ</li>
+                  <li>SV ẩn danh → phản hồi thật, không sợ bị đánh giá</li>
+                  <li>Cảnh báo sớm lớp có vấn đề – can thiệp kịp thời</li>
+                  <li>Data khách quan thay vì cảm tính</li>
+                  <li>Tích hợp LMS – không thay đổi workflow</li>
+                </ul>
               </div>
-              <div class="feature-card">
-                <h4>🧠 AI Insights</h4>
-                <p>
-                  Sentiment analysis + engagement pattern → gợi ý: "Nên giải
-                  thích lại phần X", "Nên cho ví dụ thêm", "Pace quá nhanh".
-                </p>
-              </div>
-              <div class="feature-card">
-                <h4>⚠️ Early Warning</h4>
-                <p>
-                  Predictive model dự đoán SV có nguy cơ rớt môn dựa trên
-                  engagement data. Alert giảng viên can thiệp sớm.
-                </p>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Gain Creators</div>
+                <ul>
+                  <li>GV cải thiện liên tục – mỗi buổi tốt hơn buổi trước</li>
+                  <li>Trường có data cho kiểm định chất lượng</li>
+                  <li>SV được lắng nghe, engagement tăng</li>
+                  <li>Giảm tỷ lệ rớt môn 20-30%</li>
+                </ul>
               </div>
             </div>
-            <p style="margin-top: 20px">
-              <strong>Khác biệt:</strong> Mentimeter/Kahoot chỉ là quiz tool.
-              ClassPulse là hệ thống AI phân tích chất lượng giảng dạy liên tục,
-              có predictive model và actionable insights.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="business" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">03</span>
-            <h3>Mô hình kinh doanh</h3>
-          </div>
-          <div class="section-content">
-            <div class="biz-grid">
-              <div class="biz-card">
-                <div class="biz-icon">🆓</div>
-                <div class="biz-title">Free – Giảng viên</div>
-                <div class="biz-desc">
-                  Miễn phí cho giảng viên cá nhân: 1 lớp, 50 SV, basic pulse +
-                  Q&A.
-                </div>
+            <div class="vpc-side">
+              <div class="vpc-side-label">👤 Customer Profile (Khách hàng)</div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Customer Jobs</div>
+                <ul>
+                  <li>GV: cần biết SV có hiểu không để điều chỉnh</li>
+                  <li>Ban GH: cần đảm bảo chất lượng giảng dạy đồng đều</li>
+                  <li>Phòng ĐBCL: cần data cho kiểm định</li>
+                  <li>SV: cần được lắng nghe khi không hiểu bài</li>
+                </ul>
               </div>
-              <div class="biz-card">
-                <div class="biz-icon">🏫</div>
-                <div class="biz-title">SaaS B2B</div>
-                <div class="biz-desc">
-                  Subscription cho trường: 30-100 triệu/năm tùy quy mô.
-                  Unlimited classes, AI insights, admin dashboard.
-                </div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Pains (Nỗi đau)</div>
+                <ul>
+                  <li>Feedback quá chậm (cuối kỳ mới có)</li>
+                  <li>SV ngại hỏi, GV không biết ai đang lost</li>
+                  <li>Không có data khách quan về chất lượng GD</li>
+                  <li>Khảo sát cuối kỳ có bias, không actionable</li>
+                  <li>Kiểm định chất lượng thiếu evidence</li>
+                </ul>
               </div>
-              <div class="biz-card">
-                <div class="biz-icon">📊</div>
-                <div class="biz-title">Analytics Add-on</div>
-                <div class="biz-desc">
-                  Gói nâng cao: predictive model, benchmarking giữa các khoa,
-                  báo cáo kiểm định chất lượng.
-                </div>
-              </div>
-            </div>
-            <p style="margin-top: 20px">
-              <strong>Khách hàng:</strong> Trường ĐH/CĐ (B2B chính). Giảng viên
-              cá nhân (freemium, viral growth). Cơ quan kiểm định chất lượng GD
-              (data partner).
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">04</span>
-            <h3>Tiềm năng thị trường</h3>
-          </div>
-          <div class="section-content">
-            <p>
-              Thị trường Learning Analytics toàn cầu đạt $7.3 tỷ (2025), CAGR
-              25%. Tại VN, 237 trường ĐH + 189 CĐ + 70.000 giảng viên là đối
-              tượng tiềm năng.
-            </p>
-            <div class="market-highlights">
-              <div class="market-card">
-                <div class="market-val">$7.3B</div>
-                <div class="market-lbl">Learning Analytics 2025</div>
-              </div>
-              <div class="market-card">
-                <div class="market-val">426</div>
-                <div class="market-lbl">Trường ĐH/CĐ VN</div>
-              </div>
-              <div class="market-card">
-                <div class="market-val">70K</div>
-                <div class="market-lbl">Giảng viên</div>
-              </div>
-              <div class="market-card">
-                <div class="market-val">25%</div>
-                <div class="market-lbl">CAGR</div>
-              </div>
-            </div>
-            <p style="margin-top: 16px">
-              <strong>Xu hướng:</strong> Kiểm định chất lượng GD ngày càng
-              nghiêm ngặt → trường cần data. Hybrid learning post-COVID → cần
-              tool engagement online + offline.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="tech" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">05</span>
-            <h3>Ứng dụng công nghệ</h3>
-          </div>
-          <div class="section-content">
-            <div class="tech-grid">
-              <div class="tech-item">
-                <div class="tech-icon">⚡</div>
-                <div>
-                  <div class="tech-name">WebSocket (Socket.io)</div>
-                  <div class="tech-desc">
-                    Real-time bidirectional communication. Latency < 100ms. Hỗ
-                    trợ 500+ concurrent users/class.
-                  </div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <div class="tech-icon">🧠</div>
-                <div>
-                  <div class="tech-name">NLP Sentiment Analysis</div>
-                  <div class="tech-desc">
-                    Phân tích comment/câu hỏi của SV. Detect confusion,
-                    frustration, engagement level.
-                  </div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <div class="tech-icon">📈</div>
-                <div>
-                  <div class="tech-name">Predictive ML Model</div>
-                  <div class="tech-desc">
-                    Random Forest + LSTM dự đoán SV at-risk dựa trên engagement
-                    pattern qua thời gian.
-                  </div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <div class="tech-icon">📊</div>
-                <div>
-                  <div class="tech-name">Dashboard BI (D3.js)</div>
-                  <div class="tech-desc">
-                    Real-time visualization cho giảng viên + admin. Heatmap,
-                    trend lines, comparative analytics.
-                  </div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <div class="tech-icon">🔔</div>
-                <div>
-                  <div class="tech-name">Smart Notifications</div>
-                  <div class="tech-desc">
-                    AI-powered alerts: khi engagement drop, khi nhiều SV
-                    confused, khi cần break.
-                  </div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <div class="tech-icon">🔌</div>
-                <div>
-                  <div class="tech-name">LMS Integration</div>
-                  <div class="tech-desc">
-                    API tích hợp Moodle, Canvas, Google Classroom. SSO cho
-                    trường.
-                  </div>
-                </div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Gains (Kỳ vọng)</div>
+                <ul>
+                  <li>Feedback real-time, actionable ngay</li>
+                  <li>Cải thiện chất lượng giảng dạy liên tục</li>
+                  <li>SV thoải mái phản hồi (ẩn danh)</li>
+                  <li>Data-driven decision making</li>
+                  <li>Đạt chuẩn kiểm định quốc tế</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <section class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">06</span>
-            <h3>Tác động xã hội</h3>
+<!-- Mô hình kinh doanh + Lean Canvas -->
+<section id="business" class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">03</span>
+        <h3>Mô hình kinh doanh</h3>
+        <p>Cách tạo doanh thu và khách hàng mục tiêu</p>
+      </div>
+      <div class="p-content">
+        <div class="biz-grid">
+          <div class="biz-card">
+            <div class="biz-icon">🆓</div>
+            <div class="biz-title">Free – Giảng viên cá nhân</div>
+            <div class="biz-desc">
+              Gói miễn phí cho GV: basic pulse check (1 lớp, 50 SV), simple
+              analytics. Mục đích: tạo adoption từ dưới lên, GV yêu thích → đề
+              xuất trường mua.
+            </div>
           </div>
-          <div class="section-content">
-            <p>
-              <strong>Hiệu quả kinh tế:</strong> SaaS recurring revenue. Dự kiến
-              20 trường năm 1 × 50 triệu = 1 tỷ VNĐ ARR. Gross margin 80%+
-              (software).
-            </p>
+          <div class="biz-card">
+            <div class="biz-icon">🏫</div>
+            <div class="biz-title">SaaS B2B – Trường ĐH</div>
+            <div class="biz-desc">
+              Gói Standard: 80 triệu/năm (unlimited GV + basic analytics). Gói
+              Premium: 200 triệu/năm (+ predictive ML + AI suggestions + LMS
+              integration + custom reports cho kiểm định).
+            </div>
+          </div>
+          <div class="biz-card">
+            <div class="biz-icon">📊</div>
+            <div class="biz-title">Analytics Add-on</div>
+            <div class="biz-desc">
+              Module bổ sung: Predictive dropout warning (30 triệu/năm),
+              Curriculum effectiveness analysis (20 triệu/năm), Benchmarking
+              report (15 triệu/năm).
+            </div>
+          </div>
+          <div class="biz-card">
+            <div class="biz-icon">🏛️</div>
+            <div class="biz-title">B2G – Sở GD&ĐT</div>
+            <div class="biz-desc">
+              Hợp đồng với Sở GD&ĐT: triển khai cho hệ thống trường công lập.
+              Dashboard tổng hợp cấp tỉnh/thành. Phục vụ chương trình đảm bảo
+              chất lượng giáo dục quốc gia.
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top: 20px"><strong>Khách hàng chính:</strong></p>
+        <ul class="impact-list">
+          <li>
+            <span class="il-icon">🏫</span> 426 trường ĐH/CĐ – đối tượng B2B
+            chính
+          </li>
+          <li>
+            <span class="il-icon">👨‍🏫</span> 70.000+ giảng viên đại học – early
+            adopter (free tier)
+          </li>
+          <li><span class="il-icon">🏛️</span> 63 Sở GD&ĐT – đối tượng B2G</li>
+        </ul>
+
+        <!-- Lean Canvas -->
+        <div class="canvas-section">
+          <div class="canvas-title">Lean Canvas</div>
+          <div class="lean-canvas">
+            <div class="lc-cell lc-problem">
+              <div class="lc-label">❌ Problem</div>
+              <ul>
+                <li>Feedback chất lượng GD quá chậm (cuối kỳ)</li>
+                <li>GV không biết SV có hiểu không real-time</li>
+                <li>Thiếu data khách quan cho kiểm định</li>
+                <li>SV ngại hỏi → tích tụ lỗ hổng</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-solution">
+              <div class="lc-label">✅ Solution</div>
+              <ul>
+                <li>Real-time pulse check (1-tap)</li>
+                <li>NLP sentiment analysis tiếng Việt</li>
+                <li>Predictive early warning ML</li>
+                <li>AI teaching suggestions</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-uvp">
+              <div class="lc-label">💎 Unique Value Proposition</div>
+              <ul>
+                <li>Biết ngay SV hiểu hay không – trong buổi giảng</li>
+                <li>Cải thiện liên tục, không đợi cuối kỳ</li>
+                <li>Data-driven teaching quality assurance</li>
+                <li>Tích hợp LMS – zero friction adoption</li>
+                <li>AI gợi ý cách cải thiện cụ thể</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-advantage">
+              <div class="lc-label">🏆 Unfair Advantage</div>
+              <ul>
+                <li>NLP tiếng Việt cho education context</li>
+                <li>Bottom-up adoption (GV free → trường mua)</li>
+                <li>Data accumulation → better predictions</li>
+                <li>LMS integration sẵn có</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-segments">
+              <div class="lc-label">👥 Customer Segments</div>
+              <ul>
+                <li>GV đại học muốn cải thiện (early adopter)</li>
+                <li>Trường ĐH cần kiểm định chất lượng</li>
+                <li>Phòng ĐBCL cần data & evidence</li>
+                <li>Sở GD&ĐT quản lý chất lượng hệ thống</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-metrics">
+              <div class="lc-label">📊 Key Metrics</div>
+              <ul>
+                <li>Số GV active weekly (target 60%)</li>
+                <li>SV response rate per class (target >70%)</li>
+                <li>Teaching quality score improvement</li>
+                <li>School conversion (free GV → B2B)</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-channels">
+              <div class="lc-label">📢 Channels</div>
+              <ul>
+                <li>Direct outreach to GV (LinkedIn, hội thảo)</li>
+                <li>Partnership phòng ĐBCL các trường</li>
+                <li>Hội nghị giáo dục quốc gia</li>
+                <li>Word-of-mouth GV → GV</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-cost">
+              <div class="lc-label">💸 Cost Structure</div>
+              <ul>
+                <li>NLP/ML development & training</li>
+                <li>Cloud infrastructure (real-time)</li>
+                <li>LMS integration development</li>
+                <li>Sales team (B2B enterprise)</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-revenue">
+              <div class="lc-label">💰 Revenue Streams</div>
+              <ul>
+                <li>SaaS B2B license (80-200 triệu/năm)</li>
+                <li>Analytics add-on modules</li>
+                <li>B2G government contracts</li>
+                <li>Consulting & implementation fees</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tiềm năng thị trường -->
+<section class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">04</span>
+        <h3>Tiềm năng thị trường</h3>
+        <p>Quy mô, tốc độ tăng trưởng và xu hướng</p>
+      </div>
+      <div class="p-content">
+        <p>
+          Thị trường Learning Analytics toàn cầu đạt
+          <strong>$7.3 tỷ vào 2027</strong> (CAGR 23.1%). Tại Việt Nam, có
+          <strong>426 trường ĐH/CĐ</strong> và
+          <strong>70.000+ giảng viên</strong> – tất cả đều cần công cụ đo lường
+          chất lượng giảng dạy. Chương trình kiểm định chất lượng giáo dục bắt
+          buộc tạo demand mạnh mẽ.
+        </p>
+        <div class="market-grid">
+          <div class="market-card">
+            <div class="market-val">$7.3B</div>
+            <div class="market-lbl">Learning Analytics toàn cầu 2027</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">23.1%</div>
+            <div class="market-lbl">CAGR</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">426</div>
+            <div class="market-lbl">Trường ĐH/CĐ tại VN</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">70K+</div>
+            <div class="market-lbl">Giảng viên đại học</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">2.6M</div>
+            <div class="market-lbl">Sinh viên (end users)</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">100%</div>
+            <div class="market-lbl">Trường phải kiểm định CLGD</div>
+          </div>
+        </div>
+        <p style="margin-top: 16px">
+          <strong>Xu hướng công nghệ:</strong> NLP tiếng Việt phát triển mạnh
+          (PhoBERT, ViT5). Real-time analytics trở thành standard trong EdTech.
+          Predictive ML cho education đang là hot topic nghiên cứu. LMS adoption
+          tăng mạnh post-COVID.
+        </p>
+        <p>
+          <strong>Xu hướng xã hội:</strong> Kiểm định chất lượng giáo dục trở
+          thành bắt buộc (Thông tư 12/2017). Trường cần evidence-based quality
+          assurance. Student-centered learning đòi hỏi feedback loop nhanh.
+          Chuyển đổi số giáo dục là ưu tiên quốc gia.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Công nghệ -->
+<section id="tech" class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">05</span>
+        <h3>Ứng dụng công nghệ</h3>
+        <p>Công nghệ cốt lõi và ứng dụng cụ thể</p>
+      </div>
+      <div class="p-content">
+        <div class="tech-grid">
+          <div class="tech-item">
+            <div class="tech-icon">⚡</div>
+            <div>
+              <div class="tech-name">WebSocket (Socket.io)</div>
+              <div class="tech-desc">
+                Real-time bidirectional communication cho pulse check. Sub-100ms
+                latency. Room-based architecture (1 room = 1 lớp). Ứng dụng: SV
+                tap → GV thấy ngay lập tức, live updating dashboard.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🧠</div>
+            <div>
+              <div class="tech-name">NLP Sentiment Analysis (PhoBERT)</div>
+              <div class="tech-desc">
+                Fine-tuned PhoBERT cho education context tiếng Việt. Phân loại:
+                confusion, frustration, engagement, boredom. Entity extraction:
+                topic/concept gây khó khăn. Ứng dụng: hiểu SV đang cảm thấy gì
+                về bài giảng.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">📈</div>
+            <div>
+              <div class="tech-name">Predictive ML (XGBoost + LSTM)</div>
+              <div class="tech-desc">
+                XGBoost cho tabular features (attendance, grades, engagement).
+                LSTM cho time-series (engagement trend). Ứng dụng: dự đoán lớp
+                sắp có vấn đề, SV có nguy cơ dropout, trước 2-3 tuần.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">📊</div>
+            <div>
+              <div class="tech-name">Dashboard BI (D3.js + Chart.js)</div>
+              <div class="tech-desc">
+                Interactive dashboard: real-time charts, heatmaps, trend lines.
+                Responsive design cho mobile (GV xem trên điện thoại khi giảng).
+                Ứng dụng: trực quan hóa teaching analytics cho GV và ban GH.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🔌</div>
+            <div>
+              <div class="tech-name">LMS Integration (LTI 1.3)</div>
+              <div class="tech-desc">
+                Learning Tools Interoperability standard. Tích hợp Moodle,
+                Canvas, Google Classroom. SSO, grade passback, roster sync. Ứng
+                dụng: GV dùng ngay trong LMS hiện tại, zero friction.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🤖</div>
+            <div>
+              <div class="tech-name">AI Suggestion Engine (GPT + RAG)</div>
+              <div class="tech-desc">
+                LLM + Retrieval-Augmented Generation từ teaching best practices
+                database. Phân tích data → generate actionable suggestions. Ứng
+                dụng: gợi ý cách cải thiện cụ thể cho từng GV.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">☁️</div>
+            <div>
+              <div class="tech-name">Microservices (Node.js + Python)</div>
+              <div class="tech-desc">
+                Node.js cho real-time services (WebSocket, API gateway). Python
+                cho ML/NLP services. Docker + Kubernetes. Ứng dụng: scalable
+                architecture xử lý 10K+ concurrent users.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🔒</div>
+            <div>
+              <div class="tech-name">Privacy & Anonymization</div>
+              <div class="tech-desc">
+                Differential privacy cho aggregate analytics. Anonymization
+                pipeline đảm bảo không trace được SV cá nhân. FERPA-inspired
+                compliance. Ứng dụng: SV yên tâm phản hồi thật mà không sợ bị
+                identify.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Hiệu quả kinh tế & tác động xã hội -->
+    <section class="p-section">
+      <div class="container">
+        <div class="p-grid">
+          <div class="p-sidebar"><span class="section-tag">06</span><h3>Hiệu quả kinh tế & tác động xã hội</h3><p>Khả năng sinh lợi và đóng góp cộng đồng</p></div>
+          <div class="p-content">
+            <p><strong>Hiệu quả kinh tế:</strong></p>
             <ul class="impact-list">
-              <li>
-                Nâng cao chất lượng giảng dạy thông qua data-driven feedback,
-                không phải cảm tính
-              </li>
-              <li>
-                Giảm tỷ lệ rớt môn nhờ early warning system – can thiệp trước
-                khi quá muộn
-              </li>
-              <li>
-                Trao quyền cho sinh viên: được lắng nghe mà không sợ bị đánh giá
-                (anonymous)
-              </li>
-              <li>
-                Hỗ trợ trường đạt chuẩn kiểm định chất lượng với data minh bạch
-              </li>
-              <li>Tạo văn hóa cải tiến liên tục trong giáo dục đại học</li>
+              <li><span class="il-icon">💰</span> Năm 1: 5 trường × 100 triệu + add-ons = 700 triệu VNĐ (+ 2000 GV free tier)</li>
+              <li><span class="il-icon">📈</span> Năm 2: 20 trường + 2 Sở GD&ĐT + analytics modules = 4.5 tỷ VNĐ</li>
+              <li><span class="il-icon">🎯</span> Năm 3: 50 trường + 10 Sở + enterprise = 15 tỷ VNĐ</li>
+              <li><span class="il-icon">📊</span> Gross margin 75%+ (SaaS model, recurring revenue, low churn in education)</li>
             </ul>
+            <p style="margin-top:20px"><strong>Tác động xã hội & CSR:</strong></p>
+            <ul class="impact-list">
+              <li><span class="il-icon">🌍</span> Nâng cao chất lượng giáo dục đại học toàn quốc: mỗi GV cải thiện → hàng trăm SV hưởng lợi</li>
+              <li><span class="il-icon">🗣️</span> Trao tiếng nói cho SV: ẩn danh feedback giúp SV ngại hỏi cũng được lắng nghe</li>
+              <li><span class="il-icon">📉</span> Giảm tỷ lệ rớt môn/bỏ học: early warning can thiệp kịp thời, giảm 20-30% dropout</li>
+              <li><span class="il-icon">👨‍🏫</span> Phát triển nghề nghiệp GV: data-driven professional development, không phải đánh giá chủ quan</li>
+              <li><span class="il-icon">🏫</span> Hỗ trợ kiểm định: trường có evidence cho quality assurance, đạt chuẩn quốc tế</li>
+              <li><span class="il-icon">🆓</span> CSR: Miễn phí vĩnh viễn cho GV cá nhân + tặng gói Premium cho 5 trường vùng khó khăn/năm</li>
+            </ul>
+            <p style="margin-top:16px"><strong>Phát triển bền vững:</strong> Đóng góp vào SDG 4 (Quality Education – nâng cao chất lượng giảng dạy), SDG 16 (Strong Institutions – tổ chức giáo dục minh bạch, data-driven), SDG 10 (Reduced Inequalities – chất lượng GD đồng đều giữa các trường).</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="roadmap" class="content-section">
+    <!-- Roadmap -->
+    <section id="roadmap" class="p-section">
       <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">07</span>
-            <h3>Roadmap</h3>
-          </div>
-          <div class="section-content">
+        <div class="p-grid">
+          <div class="p-sidebar"><span class="section-tag">07</span><h3>Kế hoạch phát triển</h3><p>Roadmap từ ý tưởng đến thị trường</p></div>
+          <div class="p-content">
             <div class="roadmap">
-              <div class="roadmap-item">
-                <div class="roadmap-phase">Phase 1</div>
-                <div class="roadmap-title">Prototype – Core Features</div>
-                <div class="roadmap-desc">
-                  Real-time pulse + anonymous Q&A. Test với 5 giảng viên, 10 lớp
-                  tại 1 trường ĐH. Validate engagement.
-                </div>
-                <div class="roadmap-time">Tháng 1 – Tháng 3/2026</div>
+              <div class="rm-item">
+                <div class="rm-phase">Phase 1 – Prototype</div>
+                <div class="rm-title">Basic Pulse Check + Simple Analytics</div>
+                <div class="rm-desc">Xây dựng real-time pulse check system (WebSocket). Basic dashboard cho GV: tỷ lệ hiểu/không hiểu theo thời gian. Text feedback collection. Test với 10 GV tại 1 trường ĐH (20 lớp, 1000 SV). Validate: GV có thay đổi cách dạy dựa trên data không?</div>
+                <div class="rm-time">Tháng 1 – Tháng 3/2026 (3 tháng)</div>
               </div>
-              <div class="roadmap-item">
-                <div class="roadmap-phase">Phase 2</div>
-                <div class="roadmap-title">MVP + AI Layer</div>
-                <div class="roadmap-desc">
-                  Thêm sentiment analysis, smart suggestions cho GV. Dashboard
-                  admin cho trường. Pilot 3 trường.
-                </div>
-                <div class="roadmap-time">Tháng 4 – Tháng 7/2026</div>
+              <div class="rm-item">
+                <div class="rm-phase">Phase 2 – MVP</div>
+                <div class="rm-title">NLP Sentiment + Advanced Dashboard</div>
+                <div class="rm-desc">Implement NLP sentiment analysis tiếng Việt. Advanced analytics dashboard (trends, heatmaps, comparisons). LMS integration (Moodle). Mobile-responsive. Pilot 3 trường ĐH (50 GV, 5000 SV). Measure: teaching quality improvement.</div>
+                <div class="rm-time">Tháng 4 – Tháng 7/2026 (4 tháng)</div>
               </div>
-              <div class="roadmap-item">
-                <div class="roadmap-phase">Phase 3</div>
-                <div class="roadmap-title">Launch + Predictive</div>
-                <div class="roadmap-desc">
-                  Predictive model (at-risk students). LMS integration. Ra mắt
-                  thương mại. Target 20 trường.
-                </div>
-                <div class="roadmap-time">Tháng 8 – Tháng 12/2026</div>
+              <div class="rm-item">
+                <div class="rm-phase">Phase 3 – Launch</div>
+                <div class="rm-title">Predictive ML + AI Suggestions + B2B</div>
+                <div class="rm-desc">Launch predictive early warning system. AI teaching suggestions. Full LMS integration (Moodle + Canvas + Google Classroom). B2B sales: ký 5-10 trường. Free tier cho GV cá nhân (viral growth). Admin dashboard cho ban GH.</div>
+                <div class="rm-time">Tháng 8 – Tháng 12/2026 (5 tháng)</div>
               </div>
-              <div class="roadmap-item">
-                <div class="roadmap-phase">Phase 4</div>
-                <div class="roadmap-title">Scale + K-12</div>
-                <div class="roadmap-desc">
-                  Mở rộng xuống cấp THPT. Thêm video analytics (đo engagement
-                  qua camera). Quốc tế hóa.
-                </div>
-                <div class="roadmap-time">2027</div>
+              <div class="rm-item">
+                <div class="rm-phase">Phase 4 – Scale</div>
+                <div class="rm-title">B2G + Analytics Marketplace + Scale</div>
+                <div class="rm-desc">Mở rộng 50 trường. Hợp tác Sở GD&ĐT (B2G). Analytics add-on marketplace. Benchmarking reports (so sánh giữa các trường). API cho third-party. Bắt đầu thị trường Đông Nam Á. Gọi vốn Series A.</div>
+                <div class="rm-time">Năm 2027</div>
               </div>
             </div>
           </div>
@@ -400,38 +719,30 @@
       </div>
     </section>
 
-    <section id="team" class="content-section">
+    <!-- Năng lực nhóm -->
+    <section class="p-section">
       <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">08</span>
-            <h3>Năng lực nhóm</h3>
-          </div>
-          <div class="section-content">
-            <div class="team-note">
-              <p>
-                Phần thông tin nhóm sẽ được cập nhật sau khi nhóm xác nhận thành
-                viên.<br /><span class="highlight"
-                  >Vui lòng liên hệ nhóm trưởng để bổ sung thông tin.</span
-                >
-              </p>
+        <div class="p-grid">
+          <div class="p-sidebar"><span class="section-tag">08</span><h3>Năng lực tổ chức thực hiện</h3><p>Điểm mạnh của nhóm dự án</p></div>
+          <div class="p-content">
+            <div class="team-placeholder">
+              <p>📋 Phần thông tin chi tiết về thành viên nhóm sẽ được cập nhật sau khi xác nhận đội hình.</p>
+              <p style="margin-top:12px"><span class="hl">Nhóm cần bổ sung:</span> Thông tin sơ bộ thành viên, kinh nghiệm đổi mới sáng tạo, điểm mạnh đội ngũ, cố vấn (nếu có).</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="p-footer">
       <div class="container">
-        <p class="footer-brand">◆ INNOSTAR 2026</p>
+        <p class="p-footer-brand">◆ INNOSTAR 2026</p>
         <p>ClassPulse – Đo lường & nâng cao chất lượng giảng dạy real-time</p>
-        <p class="footer-sub">
-          <a href="../index.html" style="color: var(--blue)"
-            >← Quay lại trang chính</a
-          >
-        </p>
+        <p><a href="../index.html" class="p-footer-back">← Quay lại trang chính</a></p>
       </div>
     </footer>
+
     <script src="../js/main.js"></script>
   </body>
 </html>

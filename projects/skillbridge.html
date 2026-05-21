@@ -7,17 +7,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/project.css" />
   </head>
   <body>
+    <div class="bg-grid"></div>
+    <div class="bg-gradient"></div>
     <div class="cursor-glow" id="cursorGlow"></div>
+
     <nav class="nav scrolled" id="nav">
       <div class="nav-inner container">
-        <a href="../index.html" class="nav-brand">◆ INNOSTAR 2026</a>
+        <a href="../index.html" class="nav-brand">
+          <svg
+            class="brand-logo"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+          >
+            <path
+              d="M14 2L2 8.5V19.5L14 26L26 19.5V8.5L14 2Z"
+              stroke="url(#g1)"
+              stroke-width="2"
+            />
+            <path d="M14 10L8 13V19L14 22L20 19V13L14 10Z" fill="url(#g1)" />
+            <defs>
+              <linearGradient id="g1" x1="2" y1="2" x2="26" y2="26">
+                <stop stop-color="#4f8fff" />
+                <stop offset="1" stop-color="#8b5cf6" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>INNOSTAR 2026</span>
+        </a>
         <div class="nav-links">
           <a href="#problem">Vấn đề</a>
           <a href="#solution">Giải pháp</a>
@@ -28,13 +53,15 @@
       </div>
     </nav>
 
+    <!-- Hero -->
     <section class="project-hero">
-      <div class="hero-orbs">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
+      <div class="hero-floating">
+        <div class="float-shape shape-1"></div>
+        <div class="float-shape shape-2"></div>
+        <div class="float-shape shape-3"></div>
       </div>
       <div class="container project-hero-content">
-        <a href="../index.html" class="back-link">
+        <a href="../index.html" class="back-link" data-animate="fade-up">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path
               d="M10 12L6 8l4-4"
@@ -45,362 +72,684 @@
           </svg>
           Quay lại tất cả đề tài
         </a>
-        <div class="project-badge-row">
-          <span class="project-field-badge">Giáo dục × Việc làm</span>
-          <span class="project-stage-badge">Giai đoạn: Ý tưởng</span>
+        <div class="badge-row" data-animate="fade-up" data-delay="50">
+          <span class="p-badge p-badge-blue">Giáo dục × Việc làm</span>
+          <span class="p-badge p-badge-green">Giai đoạn: Ý tưởng</span>
         </div>
-        <h1>🌉 SkillBridge</h1>
-        <p class="project-tagline">
-          Kết nối sinh viên với doanh nghiệp qua micro-project – học bằng cách
-          làm, xây portfolio thực tế.
+        <h1 data-animate="fade-up" data-delay="100">🌉 SkillBridge</h1>
+        <p class="project-tagline" data-animate="fade-up" data-delay="150">
+          Kết nối sinh viên với doanh nghiệp qua micro-project – Học bằng cách
+          làm việc thật, kiếm tiền từ khi còn đi học.
         </p>
-        <div class="project-quick-stats">
-          <div class="quick-stat">
-            <span class="quick-stat-val">Commission + Sub</span
-            ><span class="quick-stat-lbl">Mô hình</span>
+        <div class="quick-stats" data-animate="fade-up" data-delay="200">
+          <div class="qs-item">
+            <span class="qs-val">Commission + SaaS</span
+            ><span class="qs-lbl">Mô hình</span>
           </div>
-          <div class="quick-stat">
-            <span class="quick-stat-val">AI + Blockchain</span
-            ><span class="quick-stat-lbl">Core Tech</span>
+          <div class="qs-item">
+            <span class="qs-val">AI + Blockchain</span
+            ><span class="qs-lbl">Core Tech</span>
           </div>
-          <div class="quick-stat">
-            <span class="quick-stat-val">SMEs + SV</span
-            ><span class="quick-stat-lbl">Khách hàng</span>
+          <div class="qs-item">
+            <span class="qs-val">800K SMEs</span
+            ><span class="qs-lbl">Doanh nghiệp VN</span>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="problem" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">01</span>
-            <h3>Vấn đề cần giải quyết</h3>
-          </div>
-          <div class="section-content">
-            <p>
-              70% sinh viên Việt Nam ra trường không đáp ứng yêu cầu nhà tuyển
-              dụng. Khoảng cách giữa kiến thức học thuật và kỹ năng thực tế ngày
-              càng lớn.
-            </p>
-            <p>
-              Doanh nghiệp vừa và nhỏ (SMEs) – chiếm 97% doanh nghiệp VN –
-              thường có các task ngắn hạn (thiết kế logo, phân tích dữ liệu,
-              viết content...) nhưng không muốn tuyển intern dài hạn vì chi phí
-              đào tạo và quản lý.
-            </p>
-            <p>
-              Sinh viên muốn có kinh nghiệm thực tế nhưng không biết bắt đầu từ
-              đâu. Freelance platform (Fiverr, Upwork) quá cạnh tranh và không
-              có hệ thống mentoring.
-            </p>
+          <div class="qs-item">
+            <span class="qs-val">2.6M SV</span
+            ><span class="qs-lbl">Sinh viên tiềm năng</span>
           </div>
         </div>
       </div>
     </section>
+  </body>
+</html>
 
-    <section id="solution" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">02</span>
-            <h3>Giải pháp sáng tạo</h3>
-          </div>
-          <div class="section-content">
-            <p>
-              SkillBridge là marketplace kết nối sinh viên với doanh nghiệp
-              thông qua micro-project (2-4 tuần). AI matching đảm bảo sinh viên
-              được giao đúng project phù hợp năng lực.
-            </p>
-            <div class="feature-grid">
-              <div class="feature-card">
-                <h4>🤖 AI Smart Matching</h4>
-                <p>
-                  Phân tích kỹ năng, ngành học, portfolio của SV → match với
-                  project phù hợp nhất từ doanh nghiệp.
-                </p>
-              </div>
-              <div class="feature-card">
-                <h4>🔗 Blockchain Credential</h4>
-                <p>
-                  Mỗi project hoàn thành = 1 Verifiable Credential trên
-                  blockchain, không thể giả mạo, dùng làm CV số.
-                </p>
-              </div>
-              <div class="feature-card">
-                <h4>🎮 Gamification</h4>
-                <p>
-                  Hệ thống XP, badge, leaderboard tạo động lực. Level up để nhận
-                  project khó hơn, lương cao hơn.
-                </p>
-              </div>
-              <div class="feature-card">
-                <h4>👨‍🏫 Mentor System</h4>
-                <p>
-                  Mỗi project có mentor từ doanh nghiệp hướng dẫn. SV không chỉ
-                  làm mà còn được học.
-                </p>
-              </div>
-            </div>
-            <p style="margin-top: 20px">
-              <strong>Khác biệt:</strong> Không phải freelance platform (cạnh
-              tranh giá). Không phải internship (ngắn hạn, linh hoạt). Là
-              "learning by doing" có hệ thống, có mentor, có credential.
-            </p>
-          </div>
-        </div>
+<!-- Tóm tắt -->
+<section class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">Tổng quan</span>
+        <h3>Tóm tắt dự án</h3>
+        <p>Mô tả ngắn gọn về ý tưởng và mục tiêu</p>
       </div>
-    </section>
-
-    <section id="business" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">03</span>
-            <h3>Mô hình kinh doanh</h3>
-          </div>
-          <div class="section-content">
-            <div class="biz-grid">
-              <div class="biz-card">
-                <div class="biz-icon">💼</div>
-                <div class="biz-title">Commission</div>
-                <div class="biz-desc">
-                  Thu 10-15% phí dịch vụ từ doanh nghiệp cho mỗi project hoàn
-                  thành.
-                </div>
-              </div>
-              <div class="biz-card">
-                <div class="biz-icon">⭐</div>
-                <div class="biz-title">SV Premium</div>
-                <div class="biz-desc">
-                  99k/tháng: priority matching, portfolio builder nâng cao,
-                  career coaching AI.
-                </div>
-              </div>
-              <div class="biz-card">
-                <div class="biz-icon">🏢</div>
-                <div class="biz-title">Enterprise</div>
-                <div class="biz-desc">
-                  Gói doanh nghiệp: đăng không giới hạn project, analytics
-                  dashboard, talent pipeline.
-                </div>
-              </div>
-            </div>
-            <p style="margin-top: 20px">
-              <strong>Khách hàng:</strong> SMEs cần task ngắn hạn (B2B) + Sinh
-              viên muốn kinh nghiệm thực tế (B2C). TAM: 800.000 SMEs + 2.6 triệu
-              SV đại học.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">04</span>
-            <h3>Tiềm năng thị trường</h3>
-          </div>
-          <div class="section-content">
-            <p>
-              Thị trường gig economy Việt Nam tăng trưởng 30%/năm. Nhu cầu
-              outsource task ngắn hạn của SMEs ngày càng cao do xu hướng lean
-              operation.
-            </p>
-            <div class="market-highlights">
-              <div class="market-card">
-                <div class="market-val">800K</div>
-                <div class="market-lbl">SMEs Việt Nam</div>
-              </div>
-              <div class="market-card">
-                <div class="market-val">30%</div>
-                <div class="market-lbl">Tăng trưởng gig economy</div>
-              </div>
-              <div class="market-card">
-                <div class="market-val">2.6M</div>
-                <div class="market-lbl">SV đại học</div>
-              </div>
-              <div class="market-card">
-                <div class="market-val">$1.5B</div>
-                <div class="market-lbl">Freelance market VN</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="tech" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">05</span>
-            <h3>Ứng dụng công nghệ</h3>
-          </div>
-          <div class="section-content">
-            <div class="tech-grid">
-              <div class="tech-item">
-                <div class="tech-icon">🤖</div>
-                <div>
-                  <div class="tech-name">AI Matching Algorithm</div>
-                  <div class="tech-desc">
-                    ML model phân tích skill vector của SV + requirement vector
-                    của project để tìm best match.
-                  </div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <div class="tech-icon">🔗</div>
-                <div>
-                  <div class="tech-name">Blockchain (Polygon)</div>
-                  <div class="tech-desc">
-                    Verifiable Credentials W3C standard. Mỗi credential là NFT
-                    soulbound, không thể transfer hay giả mạo.
-                  </div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <div class="tech-icon">🎮</div>
-                <div>
-                  <div class="tech-name">Gamification Engine</div>
-                  <div class="tech-desc">
-                    Hệ thống XP, achievement, streak. Tăng engagement và
-                    retention rate.
-                  </div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <div class="tech-icon">💬</div>
-                <div>
-                  <div class="tech-name">Real-time Collaboration</div>
-                  <div class="tech-desc">
-                    WebSocket chat, file sharing, task board tích hợp cho SV và
-                    mentor.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">06</span>
-            <h3>Tác động xã hội</h3>
-          </div>
-          <div class="section-content">
-            <ul class="impact-list">
-              <li>Thu hẹp khoảng cách giữa giáo dục và thị trường lao động</li>
-              <li>
-                Tạo thu nhập cho sinh viên ngay khi còn đi học (trung bình 2-5
-                triệu/project)
-              </li>
-              <li>
-                Giúp SMEs tiếp cận nguồn nhân lực trẻ, sáng tạo với chi phí hợp
-                lý
-              </li>
-              <li>
-                Xây dựng văn hóa "learning by doing" trong giáo dục đại học Việt
-                Nam
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="roadmap" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">07</span>
-            <h3>Roadmap</h3>
-          </div>
-          <div class="section-content">
-            <div class="roadmap">
-              <div class="roadmap-item">
-                <div class="roadmap-phase">Phase 1</div>
-                <div class="roadmap-title">Prototype & Validation</div>
-                <div class="roadmap-desc">
-                  Xây dựng MVP marketplace. Test với 50 SV + 20 doanh nghiệp tại
-                  TP.HCM. Validate product-market fit.
-                </div>
-                <div class="roadmap-time">Tháng 1 – Tháng 4/2026</div>
-              </div>
-              <div class="roadmap-item">
-                <div class="roadmap-phase">Phase 2</div>
-                <div class="roadmap-title">MVP + AI Matching</div>
-                <div class="roadmap-desc">
-                  Tích hợp AI matching, blockchain credential. Mở rộng 500 SV +
-                  100 doanh nghiệp.
-                </div>
-                <div class="roadmap-time">Tháng 5 – Tháng 8/2026</div>
-              </div>
-              <div class="roadmap-item">
-                <div class="roadmap-phase">Phase 3</div>
-                <div class="roadmap-title">Launch TP.HCM</div>
-                <div class="roadmap-desc">
-                  Ra mắt chính thức. Marketing tại các trường ĐH. Partnership
-                  với Hội Doanh nhân trẻ.
-                </div>
-                <div class="roadmap-time">Tháng 9 – Tháng 12/2026</div>
-              </div>
-              <div class="roadmap-item">
-                <div class="roadmap-phase">Phase 4</div>
-                <div class="roadmap-title">Scale toàn quốc</div>
-                <div class="roadmap-desc">
-                  Mở rộng Hà Nội, Đà Nẵng. Thêm tính năng career path
-                  recommendation. Gọi vốn Seed round.
-                </div>
-                <div class="roadmap-time">2027</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="team" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">08</span>
-            <h3>Năng lực nhóm</h3>
-          </div>
-          <div class="section-content">
-            <div class="team-note">
-              <p>
-                Phần thông tin nhóm sẽ được cập nhật sau khi nhóm xác nhận thành
-                viên.<br /><span class="highlight"
-                  >Vui lòng liên hệ nhóm trưởng để bổ sung thông tin.</span
-                >
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <div class="container">
-        <p class="footer-brand">◆ INNOSTAR 2026</p>
+      <div class="p-content">
         <p>
-          SkillBridge – Kết nối sinh viên với doanh nghiệp qua micro-project
+          <strong>Sản phẩm:</strong> Nền tảng marketplace kết nối sinh viên với
+          doanh nghiệp thông qua các micro-project (dự án nhỏ 1-4 tuần). AI
+          matching ghép cặp sinh viên phù hợp với project dựa trên kỹ năng,
+          ngành học, và mục tiêu nghề nghiệp. Blockchain credential lưu trữ
+          thành tích không thể giả mạo.
         </p>
-        <p class="footer-sub">
-          <a href="../index.html" style="color: var(--blue)"
-            >← Quay lại trang chính</a
-          >
+        <p>
+          <strong>Tóm tắt:</strong> SkillBridge giải quyết nghịch lý "cần kinh
+          nghiệm để có việc, cần việc để có kinh nghiệm" bằng cách tạo ra hệ
+          sinh thái micro-project. Doanh nghiệp đăng các task thực tế (thiết kế
+          logo, phân tích data, viết content...), sinh viên nhận làm để tích lũy
+          kinh nghiệm + kiếm thu nhập + xây portfolio. Win-win cho cả hai bên.
         </p>
+        <p>
+          <strong>Mục tiêu lớn nhất:</strong> Mỗi sinh viên ra trường đều có ít
+          nhất 10 dự án thực tế trong portfolio – được xác thực bởi doanh nghiệp
+          trên blockchain. Xóa bỏ khoảng cách giữa giảng đường và thị trường lao
+          động.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vấn đề -->
+<section id="problem" class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">01</span>
+        <h3>Vấn đề cần giải quyết</h3>
+        <p>Pain point thực tế trong kết nối giáo dục – việc làm</p>
+      </div>
+      <div class="p-content">
+        <p>
+          <strong>70% sinh viên Việt Nam</strong> ra trường không tìm được việc
+          đúng ngành trong 6 tháng đầu. Lý do #1: thiếu kinh nghiệm thực tế.
+          Doanh nghiệp yêu cầu "1-2 năm kinh nghiệm" cho vị trí entry-level –
+          một nghịch lý không thể giải quyết bằng cách học thêm lý thuyết.
+        </p>
+        <p>
+          Chương trình thực tập hiện tại có nhiều hạn chế: chỉ 2-3 tháng cuối
+          khóa, số lượng slot ít, nhiều SV bị giao việc vặt (photo, pha trà)
+          thay vì công việc chuyên môn.
+          <strong>800.000 doanh nghiệp SME</strong> tại VN có nhu cầu outsource
+          task nhỏ nhưng không biết tìm freelancer ở đâu, đặc biệt là freelancer
+          trẻ giá hợp lý.
+        </p>
+        <p>
+          Các nền tảng freelance hiện tại (Upwork, Fiverr, Freelancer.vn) không
+          phù hợp cho sinh viên: cạnh tranh với freelancer chuyên nghiệp, không
+          có hệ thống mentoring, không được công nhận bởi trường học, và không
+          có cơ chế bảo vệ người mới.
+        </p>
+        <p>
+          <strong>Tóm lại:</strong> Sinh viên cần kinh nghiệm thực tế nhưng
+          không có cơ hội. Doanh nghiệp SME cần người làm task nhỏ nhưng không
+          có kênh tiếp cận sinh viên. Hai bên cần nhau nhưng chưa có cầu nối
+          hiệu quả.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Giải pháp + Value Proposition Canvas -->
+<section id="solution" class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">02</span>
+        <h3>Giải pháp sáng tạo</h3>
+        <p>Tính đột phá và khác biệt so với thị trường</p>
+      </div>
+      <div class="p-content">
+        <p>
+          SkillBridge tạo ra một marketplace chuyên biệt cho sinh viên, với
+          <strong>AI Matching</strong> thông minh ghép cặp SV-project dựa trên
+          skill graph, <strong>Blockchain Credential</strong> xác thực thành
+          tích, và hệ thống <strong>Gamification</strong> tạo động lực hoàn
+          thành. Doanh nghiệp chia nhỏ công việc thành micro-project phù hợp với
+          SV.
+        </p>
+
+        <div class="feat-grid">
+          <div class="feat-card">
+            <h4>🤖 AI Smart Matching</h4>
+            <p>
+              Thuật toán matching phân tích skill profile, ngành học, GPA,
+              portfolio, và preference của SV để ghép với project phù hợp nhất.
+              Accuracy target: 85%+ satisfaction rate.
+            </p>
+          </div>
+          <div class="feat-card">
+            <h4>🔗 Blockchain Credential</h4>
+            <p>
+              Mỗi project hoàn thành được ghi nhận trên blockchain – không thể
+              giả mạo, có thể verify bởi bất kỳ nhà tuyển dụng nào. Thay thế CV
+              truyền thống bằng verified portfolio.
+            </p>
+          </div>
+          <div class="feat-card">
+            <h4>🎮 Gamification Engine</h4>
+            <p>
+              XP points, level up, badges, leaderboard. Hoàn thành project =
+              earn XP. Level cao = unlock project khó hơn + pay cao hơn. Streak
+              bonus cho consistency.
+            </p>
+          </div>
+          <div class="feat-card">
+            <h4>👨‍🏫 Mentor Matching</h4>
+            <p>
+              Mỗi SV mới được ghép với mentor (SV senior hoặc alumni). Mentor
+              hướng dẫn project đầu tiên, review deliverable, chia sẻ kinh
+              nghiệm. Mentor earn commission.
+            </p>
+          </div>
+          <div class="feat-card">
+            <h4>📋 Project Decomposition AI</h4>
+            <p>
+              AI giúp doanh nghiệp chia nhỏ công việc lớn thành micro-project
+              phù hợp SV. Suggest timeline, skill requirements, và mức giá hợp
+              lý.
+            </p>
+          </div>
+          <div class="feat-card">
+            <h4>⚡ Real-time Collaboration</h4>
+            <p>
+              WebSocket-based workspace cho SV và DN trao đổi real-time. Shared
+              documents, video call, task tracking. Mọi thứ trong 1 platform.
+            </p>
+          </div>
+        </div>
+
+        <p style="margin-top: 20px">
+          <strong>Khác biệt so với thị trường:</strong> Upwork/Fiverr không bảo
+          vệ người mới, không có mentoring. TopCV/VietnamWorks chỉ là job board,
+          không có micro-project. SkillBridge: chuyên cho SV + AI matching +
+          blockchain credential + gamification + mentor system + project
+          decomposition.
+        </p>
+
+        <!-- Value Proposition Canvas -->
+        <div class="canvas-section">
+          <div class="canvas-title">Value Proposition Canvas</div>
+          <div class="vpc">
+            <div class="vpc-side">
+              <div class="vpc-side-label">🎁 Value Map (Giá trị cung cấp)</div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Products & Services</div>
+                <ul>
+                  <li>Marketplace micro-project cho sinh viên</li>
+                  <li>AI matching SV ↔ Project thông minh</li>
+                  <li>Blockchain verified portfolio</li>
+                  <li>Gamification & progression system</li>
+                  <li>Mentor matching & guidance</li>
+                </ul>
+              </div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Pain Relievers</div>
+                <ul>
+                  <li>
+                    Không cần "1-2 năm kinh nghiệm" – bắt đầu từ project nhỏ
+                  </li>
+                  <li>Được bảo vệ: escrow payment, dispute resolution</li>
+                  <li>Mentor hướng dẫn project đầu tiên</li>
+                  <li>Portfolio verified – không cần lo CV bị nghi ngờ</li>
+                  <li>
+                    DN: tìm được người làm task nhỏ nhanh chóng, giá hợp lý
+                  </li>
+                </ul>
+              </div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Gain Creators</div>
+                <ul>
+                  <li>Kiếm thu nhập từ khi còn đi học (2-10 triệu/tháng)</li>
+                  <li>Xây portfolio 10+ dự án thực tế trước khi ra trường</li>
+                  <li>
+                    Network với doanh nghiệp – cơ hội full-time sau tốt nghiệp
+                  </li>
+                  <li>DN: giảm 60% chi phí so với thuê agency</li>
+                </ul>
+              </div>
+            </div>
+            <div class="vpc-side">
+              <div class="vpc-side-label">👤 Customer Profile (Khách hàng)</div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Customer Jobs</div>
+                <ul>
+                  <li>SV: cần kinh nghiệm thực tế + thu nhập + portfolio</li>
+                  <li>DN SME: cần outsource task nhỏ nhanh, giá hợp lý</li>
+                  <li>Trường ĐH: cần SV có việc làm sau tốt nghiệp (KPI)</li>
+                  <li>Nhà tuyển dụng: cần verify năng lực ứng viên</li>
+                </ul>
+              </div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Pains (Nỗi đau)</div>
+                <ul>
+                  <li>SV: không có kinh nghiệm → không có việc</li>
+                  <li>SV: thực tập bị giao việc vặt, không học được gì</li>
+                  <li>DN: thuê agency đắt, freelancer không đáng tin</li>
+                  <li>DN: không có kênh tiếp cận talent trẻ</li>
+                  <li>CV giả mạo tràn lan, khó verify năng lực thật</li>
+                </ul>
+              </div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Gains (Kỳ vọng)</div>
+                <ul>
+                  <li>Ra trường có portfolio ấn tượng</li>
+                  <li>Kiếm tiền ngay khi còn đi học</li>
+                  <li>Được doanh nghiệp biết đến trước khi tốt nghiệp</li>
+                  <li>DN: tìm được talent phù hợp nhanh chóng</li>
+                  <li>Credential đáng tin cậy, verify được</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Mô hình kinh doanh + Lean Canvas -->
+<section id="business" class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">03</span>
+        <h3>Mô hình kinh doanh</h3>
+        <p>Cách tạo doanh thu và khách hàng mục tiêu</p>
+      </div>
+      <div class="p-content">
+        <div class="biz-grid">
+          <div class="biz-card">
+            <div class="biz-icon">💸</div>
+            <div class="biz-title">Commission 10-15%</div>
+            <div class="biz-desc">
+              Thu phí 10-15% trên mỗi giao dịch hoàn thành. SV nhận project 5
+              triệu → platform thu 500-750K. Volume-based: càng nhiều giao dịch
+              càng nhiều revenue.
+            </div>
+          </div>
+          <div class="biz-card">
+            <div class="biz-icon">⭐</div>
+            <div class="biz-title">SV Premium Subscription</div>
+            <div class="biz-desc">
+              Gói Premium 149K/tháng: priority matching, unlimited applications,
+              advanced analytics, mentor access, profile boost. Gói Pro
+              299K/tháng: + career coaching + interview prep.
+            </div>
+          </div>
+          <div class="biz-card">
+            <div class="biz-icon">🏢</div>
+            <div class="biz-title">Enterprise Plan</div>
+            <div class="biz-desc">
+              Gói cho DN lớn: 50 triệu/năm – unlimited project posting,
+              dedicated talent pool, priority support, analytics dashboard, bulk
+              hiring pipeline.
+            </div>
+          </div>
+          <div class="biz-card">
+            <div class="biz-icon">🏫</div>
+            <div class="biz-title">University Partnership</div>
+            <div class="biz-desc">
+              Trường ĐH trả phí tích hợp: 30 triệu/năm – SV của trường được ưu
+              tiên, trường nhận báo cáo employability, tích hợp vào chương trình
+              đào tạo.
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top: 20px"><strong>Khách hàng chính:</strong></p>
+        <ul class="impact-list">
+          <li>
+            <span class="il-icon">👨‍🎓</span> 2.6 triệu sinh viên đại học – supply
+            side (người làm project)
+          </li>
+          <li>
+            <span class="il-icon">🏢</span> 800.000 doanh nghiệp SME – demand
+            side (người đăng project)
+          </li>
+          <li>
+            <span class="il-icon">🏫</span> 426 trường ĐH/CĐ – partnership &
+            integration
+          </li>
+        </ul>
+
+        <!-- Lean Canvas -->
+        <div class="canvas-section">
+          <div class="canvas-title">Lean Canvas</div>
+          <div class="lean-canvas">
+            <div class="lc-cell lc-problem">
+              <div class="lc-label">❌ Problem</div>
+              <ul>
+                <li>70% SV không có việc đúng ngành sau 6 tháng</li>
+                <li>Nghịch lý: cần KN để có việc, cần việc để có KN</li>
+                <li>SME cần outsource nhưng agency quá đắt</li>
+                <li>CV giả mạo, không verify được năng lực</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-solution">
+              <div class="lc-label">✅ Solution</div>
+              <ul>
+                <li>Marketplace micro-project cho SV</li>
+                <li>AI matching SV ↔ Project</li>
+                <li>Blockchain verified credential</li>
+                <li>Gamification + Mentor system</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-uvp">
+              <div class="lc-label">💎 Unique Value Proposition</div>
+              <ul>
+                <li>Kinh nghiệm thực tế + thu nhập từ khi còn đi học</li>
+                <li>Portfolio verified bằng blockchain</li>
+                <li>AI ghép cặp chính xác SV-Project</li>
+                <li>Hệ sinh thái bảo vệ & phát triển SV</li>
+                <li>DN: talent trẻ giá hợp lý, chất lượng đảm bảo</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-advantage">
+              <div class="lc-label">🏆 Unfair Advantage</div>
+              <ul>
+                <li>Network effect: càng nhiều SV → càng hấp dẫn DN</li>
+                <li>Blockchain credential không thể copy</li>
+                <li>Data matching cải thiện theo thời gian</li>
+                <li>Partnership trường ĐH = captive supply</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-segments">
+              <div class="lc-label">👥 Customer Segments</div>
+              <ul>
+                <li>SV năm 2-4 ngành IT, Marketing, Design</li>
+                <li>SME cần outsource (startup, agency nhỏ)</li>
+                <li>Trường ĐH muốn tăng employability rate</li>
+                <li>DN lớn muốn talent pipeline</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-metrics">
+              <div class="lc-label">📊 Key Metrics</div>
+              <ul>
+                <li>GMV (Gross Merchandise Value)</li>
+                <li>Project completion rate (target >85%)</li>
+                <li>Repeat rate DN (target >60%)</li>
+                <li>SV active monthly (target 30% of registered)</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-channels">
+              <div class="lc-label">📢 Channels</div>
+              <ul>
+                <li>University ambassador program</li>
+                <li>LinkedIn & Facebook groups DN</li>
+                <li>Partnership CLB sinh viên</li>
+                <li>Referral program (SV mời SV)</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-cost">
+              <div class="lc-label">💸 Cost Structure</div>
+              <ul>
+                <li>Platform development & maintenance</li>
+                <li>AI/ML infrastructure</li>
+                <li>Blockchain transaction fees</li>
+                <li>Community building & marketing</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-revenue">
+              <div class="lc-label">💰 Revenue Streams</div>
+              <ul>
+                <li>Commission 10-15% per transaction</li>
+                <li>SV Premium subscription</li>
+                <li>Enterprise plan (DN lớn)</li>
+                <li>University partnership fees</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tiềm năng thị trường -->
+<section class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">04</span>
+        <h3>Tiềm năng thị trường</h3>
+        <p>Quy mô, tốc độ tăng trưởng và xu hướng</p>
+      </div>
+      <div class="p-content">
+        <p>
+          Gig economy tại Việt Nam tăng trưởng <strong>30%/năm</strong>, dự kiến
+          đạt $12 tỷ vào 2027. Có <strong>800.000 doanh nghiệp SME</strong> và
+          <strong>2.6 triệu sinh viên</strong> – hai bên của marketplace. Thị
+          trường freelance platform toàn cầu đạt $9.19 tỷ năm 2025.
+        </p>
+        <div class="market-grid">
+          <div class="market-card">
+            <div class="market-val">30%</div>
+            <div class="market-lbl">Tăng trưởng gig economy VN</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">800K</div>
+            <div class="market-lbl">Doanh nghiệp SME tại VN</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">2.6M</div>
+            <div class="market-lbl">Sinh viên đại học VN</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">$9.19B</div>
+            <div class="market-lbl">Freelance platform toàn cầu</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">70%</div>
+            <div class="market-lbl">SV thiếu KN khi ra trường</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">0</div>
+            <div class="market-lbl">Platform micro-project cho SV tại VN</div>
+          </div>
+        </div>
+        <p style="margin-top: 16px">
+          <strong>Xu hướng công nghệ:</strong> Blockchain credential đang được
+          LinkedIn, MIT, và nhiều ĐH top thế giới áp dụng. AI matching ngày càng
+          chính xác nhờ deep learning. Remote work trở thành chuẩn mực mới –
+          micro-project hoàn toàn phù hợp.
+        </p>
+        <p>
+          <strong>Xu hướng xã hội:</strong> Gen Z muốn "portfolio, not diploma".
+          65% nhà tuyển dụng VN ưu tiên kinh nghiệm thực tế hơn bằng cấp. Gig
+          economy phát triển mạnh post-COVID. Chính phủ khuyến khích khởi nghiệp
+          sinh viên.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Công nghệ -->
+<section id="tech" class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">05</span>
+        <h3>Ứng dụng công nghệ</h3>
+        <p>Công nghệ cốt lõi và ứng dụng cụ thể</p>
+      </div>
+      <div class="p-content">
+        <div class="tech-grid">
+          <div class="tech-item">
+            <div class="tech-icon">🤖</div>
+            <div>
+              <div class="tech-name">AI Matching Engine</div>
+              <div class="tech-desc">
+                Deep learning model phân tích skill vector, project
+                requirements, historical performance. Collaborative filtering từ
+                successful matches. Ứng dụng: ghép cặp SV-Project với 85%+
+                satisfaction.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🔗</div>
+            <div>
+              <div class="tech-name">Blockchain (Polygon/Solana)</div>
+              <div class="tech-desc">
+                Smart contract ghi nhận credential on-chain. NFT-based
+                certificates. Verifiable bởi bất kỳ ai qua public key. Ứng dụng:
+                portfolio không thể giả mạo, thay thế CV truyền thống.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🎮</div>
+            <div>
+              <div class="tech-name">Gamification Framework</div>
+              <div class="tech-desc">
+                Custom XP/level system. Achievement badges, streak tracking,
+                leaderboard. Behavioral psychology (variable rewards, loss
+                aversion). Ứng dụng: tạo động lực hoàn thành project, retention.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">⚡</div>
+            <div>
+              <div class="tech-name">WebSocket (Socket.io)</div>
+              <div class="tech-desc">
+                Real-time bidirectional communication. Presence detection,
+                typing indicators, live notifications. Ứng dụng: chat real-time
+                giữa SV và DN, live collaboration workspace.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">📊</div>
+            <div>
+              <div class="tech-name">NLP – Skill Extraction</div>
+              <div class="tech-desc">
+                PhoBERT/ViT5 phân tích mô tả project để extract required skills.
+                Auto-tag và categorize. Ứng dụng: tự động phân loại project,
+                suggest skills cho SV cần học thêm.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🔒</div>
+            <div>
+              <div class="tech-name">Escrow Payment System</div>
+              <div class="tech-desc">
+                Smart contract-based escrow: DN deposit → SV hoàn thành → auto
+                release. Dispute resolution mechanism. Ứng dụng: bảo vệ cả hai
+                bên, tạo trust trong giao dịch.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">📱</div>
+            <div>
+              <div class="tech-name">React Native + Next.js</div>
+              <div class="tech-desc">
+                Cross-platform mobile app (iOS + Android) + responsive web.
+                Shared codebase. Push notifications, offline capability. Ứng
+                dụng: trải nghiệm mượt mà trên mọi thiết bị.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">📈</div>
+            <div>
+              <div class="tech-name">Analytics & Recommendation</div>
+              <div class="tech-desc">
+                Tracking user behavior, project outcomes, skill development. ML
+                model predict project success probability. Ứng dụng: cải thiện
+                matching, gợi ý career path cho SV.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Hiệu quả kinh tế & tác động xã hội -->
+    <section class="p-section">
+      <div class="container">
+        <div class="p-grid">
+          <div class="p-sidebar"><span class="section-tag">06</span><h3>Hiệu quả kinh tế & tác động xã hội</h3><p>Khả năng sinh lợi và đóng góp cộng đồng</p></div>
+          <div class="p-content">
+            <p><strong>Hiệu quả kinh tế:</strong></p>
+            <ul class="impact-list">
+              <li><span class="il-icon">💰</span> Năm 1: 5000 giao dịch × 3 triệu TB × 12% commission = 1.8 tỷ VNĐ</li>
+              <li><span class="il-icon">📈</span> Năm 2: 25.000 giao dịch + Premium + Enterprise = 12 tỷ VNĐ</li>
+              <li><span class="il-icon">🎯</span> Năm 3: 100.000 giao dịch + scale = 45 tỷ VNĐ GMV, 6 tỷ revenue</li>
+              <li><span class="il-icon">📊</span> Take rate 12-15%, gross margin 65%+ (marketplace model, low marginal cost)</li>
+            </ul>
+            <p style="margin-top:20px"><strong>Tác động xã hội & CSR:</strong></p>
+            <ul class="impact-list">
+              <li><span class="il-icon">🌍</span> Giảm tỷ lệ thất nghiệp sinh viên: mỗi SV có 10+ dự án thực tế khi ra trường</li>
+              <li><span class="il-icon">💪</span> Trao quyền kinh tế cho SV: kiếm 2-10 triệu/tháng từ khi còn đi học</li>
+              <li><span class="il-icon">🏘️</span> SV tỉnh lẻ tiếp cận cơ hội bình đẳng: remote micro-project không phân biệt địa lý</li>
+              <li><span class="il-icon">🤝</span> Hỗ trợ SME phát triển: giảm 60% chi phí outsource so với agency</li>
+              <li><span class="il-icon">🎓</span> Nâng cao chất lượng đào tạo: trường ĐH có data employability thực tế</li>
+              <li><span class="il-icon">🆓</span> CSR: Miễn phí Premium cho 500 SV có hoàn cảnh khó khăn mỗi năm</li>
+            </ul>
+            <p style="margin-top:16px"><strong>Phát triển bền vững:</strong> Đóng góp vào SDG 8 (Decent Work & Economic Growth – việc làm bền vững), SDG 4 (Quality Education – học qua thực hành), SDG 10 (Reduced Inequalities – cơ hội bình đẳng cho SV mọi vùng miền).</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="p-section">
+      <div class="container">
+        <div class="p-grid">
+          <div class="p-sidebar"><span class="section-tag">07</span><h3>Kế hoạch phát triển</h3><p>Roadmap từ ý tưởng đến thị trường</p></div>
+          <div class="p-content">
+            <div class="roadmap">
+              <div class="rm-item">
+                <div class="rm-phase">Phase 1 – Prototype</div>
+                <div class="rm-title">MVP marketplace – 1 ngành (IT)</div>
+                <div class="rm-desc">Xây dựng marketplace cơ bản cho ngành IT: web development, design, content. Manual matching (chưa AI). Escrow payment cơ bản. Test với 50 SV + 20 DN tại TP.HCM. Validate: SV có hoàn thành project không? DN có hài lòng không?</div>
+                <div class="rm-time">Tháng 1 – Tháng 3/2026 (3 tháng)</div>
+              </div>
+              <div class="rm-item">
+                <div class="rm-phase">Phase 2 – MVP</div>
+                <div class="rm-title">AI Matching + Gamification + 3 ngành</div>
+                <div class="rm-desc">Implement AI matching engine. Thêm gamification (XP, levels, badges). Mở rộng: IT + Marketing + Design. Blockchain credential v1. Mentor system. Pilot 500 SV + 100 DN. Mobile app launch.</div>
+                <div class="rm-time">Tháng 4 – Tháng 7/2026 (4 tháng)</div>
+              </div>
+              <div class="rm-item">
+                <div class="rm-phase">Phase 3 – Launch</div>
+                <div class="rm-title">Ra mắt chính thức + University Partnership</div>
+                <div class="rm-desc">Public launch. Ký partnership 5 trường ĐH. Enterprise plan cho DN lớn. Advanced AI matching. Real-time collaboration workspace. Marketing campaign. Target: 5000 SV active, 500 DN, 1000 projects/tháng.</div>
+                <div class="rm-time">Tháng 8 – Tháng 12/2026 (5 tháng)</div>
+              </div>
+              <div class="rm-item">
+                <div class="rm-phase">Phase 4 – Scale</div>
+                <div class="rm-title">Mở rộng toàn quốc + Đông Nam Á</div>
+                <div class="rm-desc">Mở rộng tất cả ngành nghề. 20 trường ĐH partnership. Corporate talent pipeline. Bắt đầu thị trường Đông Nam Á (Philippines, Indonesia – English-speaking talent). Gọi vốn Series A. Target: 50K SV, 5000 DN.</div>
+                <div class="rm-time">Năm 2027</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Năng lực nhóm -->
+    <section class="p-section">
+      <div class="container">
+        <div class="p-grid">
+          <div class="p-sidebar"><span class="section-tag">08</span><h3>Năng lực tổ chức thực hiện</h3><p>Điểm mạnh của nhóm dự án</p></div>
+          <div class="p-content">
+            <div class="team-placeholder">
+              <p>📋 Phần thông tin chi tiết về thành viên nhóm sẽ được cập nhật sau khi xác nhận đội hình.</p>
+              <p style="margin-top:12px"><span class="hl">Nhóm cần bổ sung:</span> Thông tin sơ bộ thành viên, kinh nghiệm đổi mới sáng tạo, điểm mạnh đội ngũ, cố vấn (nếu có).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-footer">
+      <div class="container">
+        <p class="p-footer-brand">◆ INNOSTAR 2026</p>
+        <p>SkillBridge – Kết nối sinh viên với doanh nghiệp qua micro-project</p>
+        <p><a href="../index.html" class="p-footer-back">← Quay lại trang chính</a></p>
       </div>
     </footer>
+
     <script src="../js/main.js"></script>
   </body>
 </html>

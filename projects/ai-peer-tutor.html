@@ -7,17 +7,42 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../css/main.css" />
     <link rel="stylesheet" href="../css/project.css" />
   </head>
   <body>
+    <div class="bg-grid"></div>
+    <div class="bg-gradient"></div>
     <div class="cursor-glow" id="cursorGlow"></div>
+
     <nav class="nav scrolled" id="nav">
       <div class="nav-inner container">
-        <a href="../index.html" class="nav-brand">◆ INNOSTAR 2026</a>
+        <a href="../index.html" class="nav-brand">
+          <svg
+            class="brand-logo"
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+          >
+            <path
+              d="M14 2L2 8.5V19.5L14 26L26 19.5V8.5L14 2Z"
+              stroke="url(#g1)"
+              stroke-width="2"
+            />
+            <path d="M14 10L8 13V19L14 22L20 19V13L14 10Z" fill="url(#g1)" />
+            <defs>
+              <linearGradient id="g1" x1="2" y1="2" x2="26" y2="26">
+                <stop stop-color="#4f8fff" />
+                <stop offset="1" stop-color="#8b5cf6" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>INNOSTAR 2026</span>
+        </a>
         <div class="nav-links">
           <a href="#problem">Vấn đề</a>
           <a href="#solution">Giải pháp</a>
@@ -30,12 +55,13 @@
 
     <!-- Hero -->
     <section class="project-hero">
-      <div class="hero-orbs">
-        <div class="orb orb-1"></div>
-        <div class="orb orb-2"></div>
+      <div class="hero-floating">
+        <div class="float-shape shape-1"></div>
+        <div class="float-shape shape-2"></div>
+        <div class="float-shape shape-3"></div>
       </div>
       <div class="container project-hero-content">
-        <a href="../index.html" class="back-link">
+        <a href="../index.html" class="back-link" data-animate="fade-up">
           <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
             <path
               d="M10 12L6 8l4-4"
@@ -46,370 +72,649 @@
           </svg>
           Quay lại tất cả đề tài
         </a>
-        <div class="project-badge-row">
-          <span class="project-field-badge">Giáo dục</span>
-          <span class="project-stage-badge">Giai đoạn: Ý tưởng</span>
+        <div class="badge-row" data-animate="fade-up" data-delay="50">
+          <span class="p-badge p-badge-blue">Giáo dục × AI</span>
+          <span class="p-badge p-badge-green">Giai đoạn: Ý tưởng</span>
         </div>
-        <h1>🤖 AI Peer Tutor</h1>
-        <p class="project-tagline">
-          Gia sư AI cá nhân hóa theo phong cách học – hiểu cách bạn tiếp thu,
-          dạy theo cách bạn hiểu.
+        <h1 data-animate="fade-up" data-delay="100">🤖 AI Peer Tutor</h1>
+        <p class="project-tagline" data-animate="fade-up" data-delay="150">
+          Gia sư AI cá nhân hóa theo phong cách học – Học theo cách của bạn,
+          tiến bộ theo tốc độ của bạn.
         </p>
-        <div class="project-quick-stats">
-          <div class="quick-stat">
-            <span class="quick-stat-val">Freemium + B2B</span
-            ><span class="quick-stat-lbl">Mô hình</span>
+        <div class="quick-stats" data-animate="fade-up" data-delay="200">
+          <div class="qs-item">
+            <span class="qs-val">Freemium + B2B</span
+            ><span class="qs-lbl">Mô hình</span>
           </div>
-          <div class="quick-stat">
-            <span class="quick-stat-val">LLM + NLP</span
-            ><span class="quick-stat-lbl">Core Tech</span>
+          <div class="qs-item">
+            <span class="qs-val">LLM + NLP</span
+            ><span class="qs-lbl">Core Tech</span>
           </div>
-          <div class="quick-stat">
-            <span class="quick-stat-val">26M+ SV</span
-            ><span class="quick-stat-lbl">Thị trường</span>
+          <div class="qs-item">
+            <span class="qs-val">26M SV</span
+            ><span class="qs-lbl">Thị trường VN</span>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Vấn đề -->
-    <section id="problem" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">01</span>
-            <h3>Vấn đề cần giải quyết</h3>
-            <p>Pain point thực tế trong giáo dục Việt Nam</p>
-          </div>
-          <div class="section-content">
-            <p>
-              Hệ thống giáo dục Việt Nam đang áp dụng phương pháp giảng dạy
-              "one-size-fits-all" – tất cả sinh viên học cùng một cách, bất kể
-              phong cách tiếp thu khác nhau (visual, auditory, kinesthetic,
-              reading/writing).
-            </p>
-            <p>
-              Gia sư cá nhân có thể giải quyết vấn đề này, nhưng chi phí trung
-              bình 200.000-500.000đ/giờ khiến đa số sinh viên không thể tiếp
-              cận. Trong khi đó, các chatbot AI hiện tại (ChatGPT, Gemini) trả
-              lời chung chung, không hiểu cách mỗi người học và không có chiến
-              lược sư phạm.
-            </p>
-            <p>
-              Kết quả: sinh viên học không hiệu quả, tỷ lệ bỏ học cao, kiến thức
-              không được ghi nhớ lâu dài. Đặc biệt ở các môn STEM, tỷ lệ rớt môn
-              lên đến 30-40% tại nhiều trường đại học.
-            </p>
+          <div class="qs-item">
+            <span class="qs-val">$6.2B</span
+            ><span class="qs-lbl">AI Tutoring 2028</span>
           </div>
         </div>
       </div>
     </section>
+  </body>
+</html>
 
-    <!-- Giải pháp -->
-    <section id="solution" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">02</span>
-            <h3>Giải pháp sáng tạo</h3>
-            <p>Khác biệt so với thị trường hiện tại</p>
-          </div>
-          <div class="section-content">
+<!-- Tóm tắt -->
+<section class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">Tổng quan</span>
+        <h3>Tóm tắt dự án</h3>
+        <p>Mô tả ngắn gọn về ý tưởng và mục tiêu</p>
+      </div>
+      <div class="p-content">
+        <p>
+          <strong>Sản phẩm:</strong> Nền tảng gia sư AI cá nhân hóa, sử dụng
+          Large Language Model kết hợp Learning Analytics để nhận diện phong
+          cách học (visual, auditory, kinesthetic, reading) và tự động điều
+          chỉnh phương pháp giảng dạy, tốc độ, và nội dung phù hợp với từng sinh
+          viên.
+        </p>
+        <p>
+          <strong>Tóm tắt:</strong> AI Peer Tutor giải quyết vấn đề
+          "one-size-fits-all" trong giáo dục đại học Việt Nam. Thay vì 1 giảng
+          viên dạy 200 sinh viên cùng một cách, AI Peer Tutor tạo ra trải nghiệm
+          học 1-1 cho mỗi người – giải thích theo cách bạn hiểu, nhắc lại đúng
+          lúc bạn sắp quên, và thách thức bạn đúng mức độ phù hợp.
+        </p>
+        <p>
+          <strong>Mục tiêu lớn nhất:</strong> Mỗi sinh viên Việt Nam đều có một
+          gia sư riêng 24/7 – thông minh, kiên nhẫn, và hiểu rõ cách họ học tốt
+          nhất. Xóa bỏ rào cản tài chính trong việc tiếp cận gia sư chất lượng.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Vấn đề -->
+<section id="problem" class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">01</span>
+        <h3>Vấn đề cần giải quyết</h3>
+        <p>Pain point thực tế trong giáo dục đại học Việt Nam</p>
+      </div>
+      <div class="p-content">
+        <p>
+          Tại Việt Nam, lớp học đại học trung bình có
+          <strong>80-200 sinh viên/lớp</strong>. Giảng viên không thể cá nhân
+          hóa cho từng người. Kết quả: <strong>40% sinh viên</strong> cảm thấy
+          không theo kịp, <strong>30%</strong> cảm thấy quá dễ và chán nản.
+        </p>
+        <p>
+          Chi phí gia sư riêng: <strong>200.000-500.000 VNĐ/giờ</strong>. Sinh
+          viên trung bình không thể chi trả. Gia sư giỏi tập trung ở thành phố
+          lớn – sinh viên tỉnh lẻ gần như không có lựa chọn.
+        </p>
+        <p>
+          Các app học hiện tại (Duolingo, Khan Academy) chỉ cung cấp nội dung
+          tĩnh, không thực sự hiểu cách mỗi người học. ChatGPT có thể trả lời
+          câu hỏi nhưng không có chiến lược sư phạm, không theo dõi tiến độ dài
+          hạn, không biết khi nào cần nhắc lại kiến thức cũ.
+        </p>
+        <p>
+          <strong>Tóm lại:</strong> Sinh viên Việt Nam đang thiếu nghiêm trọng
+          sự hỗ trợ học tập cá nhân hóa. Giáo dục đại chúng không thể đáp ứng
+          nhu cầu riêng biệt của từng người, và chưa có giải pháp AI nào thực sự
+          giải quyết vấn đề này một cách có hệ thống.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Giải pháp + Value Proposition Canvas -->
+<section id="solution" class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">02</span>
+        <h3>Giải pháp sáng tạo</h3>
+        <p>Tính đột phá và khác biệt so với thị trường</p>
+      </div>
+      <div class="p-content">
+        <p>
+          AI Peer Tutor sử dụng <strong>Large Language Model</strong> fine-tuned
+          cho giáo dục, kết hợp <strong>Learning Analytics</strong> và
+          <strong>Spaced Repetition Algorithm</strong> để tạo ra trải nghiệm gia
+          sư 1-1 thực sự thông minh. Hệ thống nhận diện phong cách học của bạn
+          trong 5 phút đầu tiên và liên tục điều chỉnh.
+        </p>
+
+        <div class="feat-grid">
+          <div class="feat-card">
+            <h4>🧠 Adaptive Learning Engine</h4>
             <p>
-              AI Peer Tutor là nền tảng gia sư AI thông minh, phân tích learning
-              style của từng người dùng thông qua bài test ban đầu + theo dõi
-              hành vi học tập liên tục, sau đó tự động điều chỉnh phương pháp
-              giảng dạy cho phù hợp.
+              Nhận diện phong cách học (VARK model) và tự động điều chỉnh cách
+              giải thích: hình ảnh cho visual learner, ví dụ thực tế cho
+              kinesthetic, sơ đồ logic cho reading learner.
             </p>
-            <div class="feature-grid">
-              <div class="feature-card">
-                <h4>🧠 Learning Style Detection</h4>
-                <p>
-                  Bài test VARK + phân tích hành vi real-time để xác định cách
-                  tiếp thu tối ưu của mỗi người.
-                </p>
+          </div>
+          <div class="feat-card">
+            <h4>🔄 Spaced Repetition AI</h4>
+            <p>
+              Thuật toán SM-2 nâng cao kết hợp AI dự đoán thời điểm bạn sắp quên
+              kiến thức. Tự động tạo câu hỏi ôn tập đúng lúc, tăng retention
+              rate lên 90%.
+            </p>
+          </div>
+          <div class="feat-card">
+            <h4>💬 Socratic Dialogue</h4>
+            <p>
+              Thay vì đưa đáp án, AI đặt câu hỏi dẫn dắt theo phương pháp
+              Socratic – giúp sinh viên tự khám phá câu trả lời, phát triển tư
+              duy phản biện.
+            </p>
+          </div>
+          <div class="feat-card">
+            <h4>📊 Knowledge Gap Detection</h4>
+            <p>
+              AI phân tích pattern sai lầm để phát hiện lỗ hổng kiến thức gốc.
+              Ví dụ: sai Calculus → phát hiện thiếu nền tảng Algebra → tự động
+              bổ sung.
+            </p>
+          </div>
+          <div class="feat-card">
+            <h4>🎯 Micro-Learning Paths</h4>
+            <p>
+              Chia nhỏ kiến thức thành các module 5-15 phút. Tạo lộ trình học cá
+              nhân dựa trên mục tiêu, deadline, và tốc độ tiếp thu của từng
+              người.
+            </p>
+          </div>
+          <div class="feat-card">
+            <h4>👥 Peer Learning Match</h4>
+            <p>
+              AI ghép cặp sinh viên có thế mạnh bổ sung cho nhau. Người giỏi
+              Toán giúp người yếu Toán, đổi lại được giúp môn Lý – tạo cộng đồng
+              học tập.
+            </p>
+          </div>
+        </div>
+
+        <p style="margin-top: 20px">
+          <strong>Khác biệt so với thị trường:</strong> ChatGPT không có chiến
+          lược sư phạm và không nhớ context dài hạn. Duolingo chỉ dạy ngôn ngữ
+          với format cố định. Khan Academy là video một chiều. AI Peer Tutor: cá
+          nhân hóa thực sự + spaced repetition + Socratic method + theo dõi tiến
+          độ dài hạn + nội dung tiếng Việt theo chương trình ĐH VN.
+        </p>
+
+        <!-- Value Proposition Canvas -->
+        <div class="canvas-section">
+          <div class="canvas-title">Value Proposition Canvas</div>
+          <div class="vpc">
+            <div class="vpc-side">
+              <div class="vpc-side-label">🎁 Value Map (Giá trị cung cấp)</div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Products & Services</div>
+                <ul>
+                  <li>Gia sư AI cá nhân hóa 24/7 trên mobile & web</li>
+                  <li>Adaptive learning engine nhận diện phong cách học</li>
+                  <li>Spaced repetition thông minh chống quên</li>
+                  <li>Knowledge gap detection & auto-remediation</li>
+                  <li>Dashboard tiến độ cho sinh viên & giảng viên</li>
+                </ul>
               </div>
-              <div class="feature-card">
-                <h4>🎯 Adaptive Content</h4>
-                <p>
-                  Cùng một kiến thức nhưng trình bày khác nhau: video, sơ đồ tư
-                  duy, flashcard, bài tập thực hành, podcast...
-                </p>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Pain Relievers</div>
+                <ul>
+                  <li>Không cần chi 200-500K/giờ cho gia sư riêng</li>
+                  <li>Học theo tốc độ riêng, không bị áp lực lớp đông</li>
+                  <li>AI kiên nhẫn vô hạn – hỏi lại bao nhiêu lần cũng được</li>
+                  <li>Phát hiện lỗ hổng kiến thức trước khi thi</li>
+                  <li>Có sẵn 24/7, không phụ thuộc lịch gia sư</li>
+                </ul>
               </div>
-              <div class="feature-card">
-                <h4>🔄 Spaced Repetition</h4>
-                <p>
-                  Thuật toán SM-2 cải tiến, nhắc lại kiến thức đúng thời điểm
-                  sắp quên để tối ưu ghi nhớ dài hạn.
-                </p>
-              </div>
-              <div class="feature-card">
-                <h4>📊 Adaptive Testing</h4>
-                <p>
-                  Đề thi tự điều chỉnh độ khó theo năng lực, xác định chính xác
-                  lỗ hổng kiến thức.
-                </p>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Gain Creators</div>
+                <ul>
+                  <li>Tăng điểm trung bình 1.5-2.0 sau 1 học kỳ sử dụng</li>
+                  <li>Giảm 60% thời gian ôn thi nhờ spaced repetition</li>
+                  <li>Phát triển tư duy phản biện qua Socratic method</li>
+                  <li>Tự tin hơn khi hiểu rõ điểm mạnh/yếu của mình</li>
+                </ul>
               </div>
             </div>
-            <p style="margin-top: 20px">
-              <strong>Khác biệt so với thị trường:</strong> Không chỉ trả lời
-              câu hỏi như ChatGPT, mà chủ động dạy theo chiến lược sư phạm cá
-              nhân hóa. Không chỉ bán khóa học như Coursera, mà hiểu và thích
-              ứng với từng người học.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mô hình kinh doanh -->
-    <section id="business" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">03</span>
-            <h3>Mô hình kinh doanh</h3>
-            <p>Cách tạo doanh thu bền vững</p>
-          </div>
-          <div class="section-content">
-            <div class="biz-grid">
-              <div class="biz-card">
-                <div class="biz-icon">🆓</div>
-                <div class="biz-title">Freemium B2C</div>
-                <div class="biz-desc">
-                  Miễn phí cơ bản cho sinh viên. Gói Premium 99k-199k/tháng: AI
-                  tutor nâng cao, không giới hạn câu hỏi.
-                </div>
+            <div class="vpc-side">
+              <div class="vpc-side-label">👤 Customer Profile (Khách hàng)</div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Customer Jobs</div>
+                <ul>
+                  <li>
+                    Sinh viên: cần hiểu bài, đạt điểm cao, tốt nghiệp đúng hạn
+                  </li>
+                  <li>
+                    Trường ĐH: cần nâng cao chất lượng đào tạo, giảm tỷ lệ bỏ
+                    học
+                  </li>
+                  <li>
+                    Giảng viên: cần hỗ trợ SV yếu mà không tốn thêm thời gian
+                  </li>
+                  <li>Phụ huynh: muốn con học tốt mà không tốn tiền gia sư</li>
+                </ul>
               </div>
-              <div class="biz-card">
-                <div class="biz-icon">🏫</div>
-                <div class="biz-title">B2B License</div>
-                <div class="biz-desc">
-                  Bán license cho trường đại học. Dashboard theo dõi tiến độ
-                  sinh viên. Giá theo số lượng SV.
-                </div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Pains (Nỗi đau)</div>
+                <ul>
+                  <li>Lớp quá đông, không được quan tâm cá nhân</li>
+                  <li>Gia sư đắt, không đủ tài chính</li>
+                  <li>Không biết mình yếu ở đâu cho đến khi thi rớt</li>
+                  <li>Học thuộc lòng rồi quên ngay sau thi</li>
+                  <li>Sinh viên tỉnh lẻ thiếu nguồn lực học tập</li>
+                </ul>
               </div>
-              <div class="biz-card">
-                <div class="biz-icon">📚</div>
-                <div class="biz-title">Content Partner</div>
-                <div class="biz-desc">
-                  Hợp tác với nhà xuất bản, trung tâm luyện thi để tích hợp nội
-                  dung chuyên sâu.
-                </div>
-              </div>
-            </div>
-            <p style="margin-top: 20px">
-              <strong>Khách hàng chính:</strong> Sinh viên đại học 18-25 tuổi
-              (B2C), các trường đại học và cao đẳng (B2B). Thị trường mục tiêu
-              ban đầu: TP.HCM với 800.000+ sinh viên.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tiềm năng thị trường -->
-    <section class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">04</span>
-            <h3>Tiềm năng thị trường</h3>
-            <p>Số liệu và xu hướng</p>
-          </div>
-          <div class="section-content">
-            <p>
-              Thị trường EdTech Việt Nam dự kiến đạt $3.2 tỷ vào năm 2026, tăng
-              trưởng 45%/năm. Riêng phân khúc AI Tutoring toàn cầu dự kiến đạt
-              $6.2 tỷ vào 2028 (CAGR 32%).
-            </p>
-            <div class="market-highlights">
-              <div class="market-card">
-                <div class="market-val">$3.2B</div>
-                <div class="market-lbl">EdTech VN 2026</div>
-              </div>
-              <div class="market-card">
-                <div class="market-val">45%</div>
-                <div class="market-lbl">Tăng trưởng/năm</div>
-              </div>
-              <div class="market-card">
-                <div class="market-val">800K+</div>
-                <div class="market-lbl">SV tại TP.HCM</div>
-              </div>
-              <div class="market-card">
-                <div class="market-val">32%</div>
-                <div class="market-lbl">CAGR AI Tutoring</div>
-              </div>
-            </div>
-            <p style="margin-top: 16px">
-              <strong>Xu hướng:</strong> Sự bùng nổ của GenAI (ChatGPT, Gemini)
-              đã tạo thói quen sử dụng AI trong học tập. Tuy nhiên chưa có giải
-              pháp nào tại VN thực sự cá nhân hóa theo learning style.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Công nghệ -->
-    <section id="tech" class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">05</span>
-            <h3>Ứng dụng công nghệ</h3>
-            <p>Stack kỹ thuật cốt lõi</p>
-          </div>
-          <div class="section-content">
-            <div class="tech-grid">
-              <div class="tech-item">
-                <div class="tech-icon">🧠</div>
-                <div>
-                  <div class="tech-name">Large Language Model</div>
-                  <div class="tech-desc">
-                    GPT-4/Gemini API – sinh nội dung giảng dạy, trả lời câu hỏi,
-                    giải thích theo nhiều cách khác nhau.
-                  </div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <div class="tech-icon">📝</div>
-                <div>
-                  <div class="tech-name">NLP & Text Analysis</div>
-                  <div class="tech-desc">
-                    Phân tích câu trả lời của SV để đánh giá mức độ hiểu bài,
-                    phát hiện misconception.
-                  </div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <div class="tech-icon">📊</div>
-                <div>
-                  <div class="tech-name">Learning Analytics</div>
-                  <div class="tech-desc">
-                    Thu thập & phân tích hành vi học tập: thời gian, tần suất,
-                    pattern để tối ưu trải nghiệm.
-                  </div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <div class="tech-icon">🎯</div>
-                <div>
-                  <div class="tech-name">Recommendation System</div>
-                  <div class="tech-desc">
-                    Collaborative + Content-based filtering để gợi ý nội dung
-                    phù hợp nhất.
-                  </div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <div class="tech-icon">🔄</div>
-                <div>
-                  <div class="tech-name">Spaced Repetition (SM-2)</div>
-                  <div class="tech-desc">
-                    Thuật toán lập lịch ôn tập tối ưu, đảm bảo ghi nhớ dài hạn.
-                  </div>
-                </div>
-              </div>
-              <div class="tech-item">
-                <div class="tech-icon">⚡</div>
-                <div>
-                  <div class="tech-name">React + Node.js</div>
-                  <div class="tech-desc">
-                    Frontend responsive, backend scalable. Database: PostgreSQL
-                    + Redis cache.
-                  </div>
-                </div>
+              <div class="vpc-block">
+                <div class="vpc-block-title">Gains (Kỳ vọng)</div>
+                <ul>
+                  <li>Hiểu bài sâu, nhớ lâu, áp dụng được</li>
+                  <li>Có người hướng dẫn riêng mọi lúc</li>
+                  <li>Biết rõ tiến độ và lộ trình cải thiện</li>
+                  <li>Tiết kiệm thời gian học, hiệu quả hơn</li>
+                  <li>Tự tin trong thi cử và phỏng vấn</li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-    <!-- Hiệu quả & tác động -->
-    <section class="content-section">
-      <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">06</span>
-            <h3>Hiệu quả kinh tế & tác động xã hội</h3>
+<!-- Mô hình kinh doanh + Lean Canvas -->
+<section id="business" class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">03</span>
+        <h3>Mô hình kinh doanh</h3>
+        <p>Cách tạo doanh thu và khách hàng mục tiêu</p>
+      </div>
+      <div class="p-content">
+        <div class="biz-grid">
+          <div class="biz-card">
+            <div class="biz-icon">🆓</div>
+            <div class="biz-title">Freemium B2C</div>
+            <div class="biz-desc">
+              Gói miễn phí: 5 câu hỏi/ngày + basic analytics. Gói Premium:
+              99K/tháng – unlimited + spaced repetition + voice tutor. Gói Pro:
+              199K/tháng – tất cả + peer matching + exam prep.
+            </div>
           </div>
-          <div class="section-content">
-            <p>
-              <strong>Hiệu quả kinh tế:</strong> Với mô hình Freemium, dự kiến
-              đạt 50.000 người dùng trong năm đầu, tỷ lệ chuyển đổi Premium
-              5-8%. Doanh thu dự kiến năm 1: 500 triệu – 1 tỷ VNĐ.
-            </p>
+          <div class="biz-card">
+            <div class="biz-icon">🏫</div>
+            <div class="biz-title">B2B License – Trường ĐH</div>
+            <div class="biz-desc">
+              License theo số sinh viên. Gói Standard: 30 triệu/năm (1000 SV).
+              Gói Enterprise: 100 triệu/năm (unlimited + custom content + LMS
+              integration + analytics dashboard cho trường).
+            </div>
+          </div>
+          <div class="biz-card">
+            <div class="biz-icon">📚</div>
+            <div class="biz-title">Content Partnership</div>
+            <div class="biz-desc">
+              Hợp tác với nhà xuất bản giáo trình (NXB Giáo dục, NXB ĐH Quốc
+              gia) để tích hợp AI tutor vào sách điện tử. Revenue share 30/70.
+            </div>
+          </div>
+          <div class="biz-card">
+            <div class="biz-icon">🏢</div>
+            <div class="biz-title">Corporate Training</div>
+            <div class="biz-desc">
+              Mở rộng sang đào tạo doanh nghiệp: onboarding nhân viên mới,
+              upskilling. Gói Enterprise: 500 triệu/năm cho 5000+ nhân viên.
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top: 20px"><strong>Khách hàng chính:</strong></p>
+        <ul class="impact-list">
+          <li>
+            <span class="il-icon">👨‍🎓</span> 2.6 triệu sinh viên đại học – đối
+            tượng B2C trực tiếp
+          </li>
+          <li>
+            <span class="il-icon">🏫</span> 237 trường ĐH + 189 trường CĐ – đối
+            tượng B2B license
+          </li>
+          <li>
+            <span class="il-icon">📱</span> 23.4 triệu học sinh phổ thông – thị
+            trường mở rộng tương lai
+          </li>
+        </ul>
+
+        <!-- Lean Canvas -->
+        <div class="canvas-section">
+          <div class="canvas-title">Lean Canvas</div>
+          <div class="lean-canvas">
+            <div class="lc-cell lc-problem">
+              <div class="lc-label">❌ Problem</div>
+              <ul>
+                <li>Lớp 80-200 SV, không cá nhân hóa</li>
+                <li>Gia sư riêng: 200-500K/giờ, quá đắt</li>
+                <li>40% SV không theo kịp chương trình</li>
+                <li>Học xong quên ngay, retention thấp</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-solution">
+              <div class="lc-label">✅ Solution</div>
+              <ul>
+                <li>LLM fine-tuned cho giáo dục VN</li>
+                <li>Adaptive learning theo VARK model</li>
+                <li>Spaced repetition AI chống quên</li>
+                <li>Socratic dialogue phát triển tư duy</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-uvp">
+              <div class="lc-label">💎 Unique Value Proposition</div>
+              <ul>
+                <li>Gia sư riêng 24/7 giá chỉ 99K/tháng</li>
+                <li>Cá nhân hóa theo phong cách học của bạn</li>
+                <li>Nhớ lâu hơn 3x nhờ spaced repetition</li>
+                <li>Nội dung theo chương trình ĐH Việt Nam</li>
+                <li>AI kiên nhẫn vô hạn, không phán xét</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-advantage">
+              <div class="lc-label">🏆 Unfair Advantage</div>
+              <ul>
+                <li>Dataset giáo trình ĐH VN độc quyền</li>
+                <li>Learning analytics từ triệu interactions</li>
+                <li>Partnership NXB Giáo dục</li>
+                <li>First mover AI tutor tiếng Việt</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-segments">
+              <div class="lc-label">👥 Customer Segments</div>
+              <ul>
+                <li>SV đại học năm 1-2 (early adopter)</li>
+                <li>SV ôn thi cuối kỳ/tốt nghiệp</li>
+                <li>Trường ĐH muốn nâng chất lượng (B2B)</li>
+                <li>Học sinh lớp 11-12 ôn thi ĐH (mở rộng)</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-metrics">
+              <div class="lc-label">📊 Key Metrics</div>
+              <ul>
+                <li>DAU/MAU ratio (target >40%)</li>
+                <li>Conversion free → premium (target 8%)</li>
+                <li>Điểm TB tăng sau 1 tháng sử dụng</li>
+                <li>Retention rate D30 (target >50%)</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-channels">
+              <div class="lc-label">📢 Channels</div>
+              <ul>
+                <li>TikTok/Instagram – viral study tips</li>
+                <li>University ambassador program</li>
+                <li>Partnership CLB học thuật</li>
+                <li>SEO: "gia sư AI", "học hiệu quả"</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-cost">
+              <div class="lc-label">💸 Cost Structure</div>
+              <ul>
+                <li>LLM API costs (GPT/Claude)</li>
+                <li>Cloud infrastructure (AWS/GCP)</li>
+                <li>Content development team</li>
+                <li>Marketing & user acquisition</li>
+              </ul>
+            </div>
+            <div class="lc-cell lc-revenue">
+              <div class="lc-label">💰 Revenue Streams</div>
+              <ul>
+                <li>Subscription B2C (99-199K/tháng)</li>
+                <li>B2B license (30-100 triệu/năm)</li>
+                <li>Content partnership revenue share</li>
+                <li>Corporate training packages</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Tiềm năng thị trường -->
+<section class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">04</span>
+        <h3>Tiềm năng thị trường</h3>
+        <p>Quy mô, tốc độ tăng trưởng và xu hướng</p>
+      </div>
+      <div class="p-content">
+        <p>
+          Thị trường EdTech Việt Nam đạt <strong>$3.2 tỷ năm 2025</strong> với
+          tốc độ tăng trưởng 20.2% CAGR. Thị trường AI Tutoring toàn cầu dự kiến
+          đạt <strong>$6.2 tỷ vào 2028</strong>. Việt Nam có 26 triệu người
+          trong độ tuổi đi học – thị trường khổng lồ chưa được khai thác bởi AI.
+        </p>
+        <div class="market-grid">
+          <div class="market-card">
+            <div class="market-val">$3.2B</div>
+            <div class="market-lbl">EdTech Việt Nam 2025</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">$6.2B</div>
+            <div class="market-lbl">AI Tutoring toàn cầu 2028</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">26M</div>
+            <div class="market-lbl">Học sinh & sinh viên VN</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">20.2%</div>
+            <div class="market-lbl">CAGR EdTech VN</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">2.6M</div>
+            <div class="market-lbl">Sinh viên đại học</div>
+          </div>
+          <div class="market-card">
+            <div class="market-val">0</div>
+            <div class="market-lbl">AI Tutor tiếng Việt hiện tại</div>
+          </div>
+        </div>
+        <p style="margin-top: 16px">
+          <strong>Xu hướng công nghệ:</strong> GPT-4, Claude, Gemini đã chứng
+          minh LLM có thể dạy học hiệu quả. Khanmigo (Khan Academy + GPT-4) đạt
+          2M users trong 6 tháng. Duolingo Max tăng 40% retention nhờ AI. Thị
+          trường sẵn sàng cho AI tutor chuyên biệt theo ngôn ngữ và chương trình
+          địa phương.
+        </p>
+        <p>
+          <strong>Xu hướng xã hội:</strong> Gen Z Việt Nam (sinh 2000-2010) là
+          digital native, quen học qua app. 85% sinh viên có smartphone. Chi
+          tiêu cho giáo dục chiếm 20% thu nhập hộ gia đình VN – nhu cầu giải
+          pháp giá rẻ rất lớn.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Công nghệ -->
+<section id="tech" class="p-section">
+  <div class="container">
+    <div class="p-grid">
+      <div class="p-sidebar">
+        <span class="section-tag">05</span>
+        <h3>Ứng dụng công nghệ</h3>
+        <p>Công nghệ cốt lõi và ứng dụng cụ thể</p>
+      </div>
+      <div class="p-content">
+        <div class="tech-grid">
+          <div class="tech-item">
+            <div class="tech-icon">🧠</div>
+            <div>
+              <div class="tech-name">Large Language Model (GPT-4/Claude)</div>
+              <div class="tech-desc">
+                Fine-tuned trên dataset giáo trình ĐH VN. Prompt engineering cho
+                Socratic dialogue. RAG (Retrieval-Augmented Generation) để trả
+                lời chính xác theo giáo trình. Ứng dụng: core AI tutor engine.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">📝</div>
+            <div>
+              <div class="tech-name">NLP – Natural Language Processing</div>
+              <div class="tech-desc">
+                Phân tích câu hỏi sinh viên bằng tiếng Việt (PhoBERT/ViT5).
+                Intent classification, entity extraction. Ứng dụng: hiểu chính
+                xác sinh viên đang hỏi gì, ở mức độ nào.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">📊</div>
+            <div>
+              <div class="tech-name">Learning Analytics Engine</div>
+              <div class="tech-desc">
+                Thu thập và phân tích hành vi học: thời gian trả lời, pattern
+                sai, tốc độ tiếp thu. ML model phân loại learner profile. Ứng
+                dụng: cá nhân hóa nội dung và phương pháp.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🔄</div>
+            <div>
+              <div class="tech-name">Spaced Repetition System (SM-2+)</div>
+              <div class="tech-desc">
+                Thuật toán SM-2 cải tiến với AI prediction. Dự đoán forgetting
+                curve cá nhân. Auto-generate flashcards từ nội dung học. Ứng
+                dụng: tối ưu hóa việc ôn tập, tăng long-term retention.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🎯</div>
+            <div>
+              <div class="tech-name">Recommendation System</div>
+              <div class="tech-desc">
+                Collaborative filtering + content-based filtering. Phân tích
+                similarity giữa learners để gợi ý nội dung. Ứng dụng: gợi ý bài
+                học tiếp theo, peer matching, resource recommendation.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🗣️</div>
+            <div>
+              <div class="tech-name">Voice AI (TTS + STT)</div>
+              <div class="tech-desc">
+                Text-to-Speech tiếng Việt tự nhiên cho voice tutoring.
+                Speech-to-Text cho hands-free learning. Ứng dụng: học bằng giọng
+                nói khi di chuyển, accessibility cho người khiếm thị.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">📱</div>
+            <div>
+              <div class="tech-name">Progressive Web App (PWA)</div>
+              <div class="tech-desc">
+                React/Next.js + Service Worker cho offline capability.
+                Responsive design mobile-first. Push notifications cho spaced
+                repetition reminders. Ứng dụng: trải nghiệm native app trên mọi
+                thiết bị.
+              </div>
+            </div>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">🔒</div>
+            <div>
+              <div class="tech-name">Privacy & Data Security</div>
+              <div class="tech-desc">
+                End-to-end encryption cho dữ liệu học tập. GDPR/PDPA compliant.
+                On-device processing khi có thể. Ứng dụng: bảo vệ dữ liệu cá
+                nhân sinh viên, tuân thủ quy định.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Hiệu quả kinh tế & tác động xã hội -->
+    <section class="p-section">
+      <div class="container">
+        <div class="p-grid">
+          <div class="p-sidebar"><span class="section-tag">06</span><h3>Hiệu quả kinh tế & tác động xã hội</h3><p>Khả năng sinh lợi và đóng góp cộng đồng</p></div>
+          <div class="p-content">
+            <p><strong>Hiệu quả kinh tế:</strong></p>
             <ul class="impact-list">
-              <li>
-                Dân chủ hóa giáo dục: mọi sinh viên đều có gia sư AI chất lượng,
-                bất kể điều kiện kinh tế
-              </li>
-              <li>Giảm tỷ lệ rớt môn và bỏ học, đặc biệt ở các môn STEM</li>
-              <li>
-                Hỗ trợ sinh viên vùng sâu vùng xa tiếp cận phương pháp học hiện
-                đại
-              </li>
-              <li>
-                Giảm áp lực cho giảng viên, cho phép tập trung vào mentoring
-                thay vì giảng lý thuyết
-              </li>
+              <li><span class="il-icon">💰</span> Năm 1: 50K users free + 4K premium = 400 triệu/tháng × 12 = 4.8 tỷ VNĐ ARR</li>
+              <li><span class="il-icon">📈</span> Năm 2: 200K users + 5 trường B2B = 12 tỷ VNĐ ARR (growth 150%)</li>
+              <li><span class="il-icon">🎯</span> Năm 3: 500K users + 20 trường B2B + corporate = 35 tỷ VNĐ ARR</li>
+              <li><span class="il-icon">📊</span> Gross margin 70%+ (chi phí chính: LLM API + cloud, giảm dần khi scale)</li>
             </ul>
+            <p style="margin-top:20px"><strong>Tác động xã hội & CSR:</strong></p>
+            <ul class="impact-list">
+              <li><span class="il-icon">🌍</span> Dân chủ hóa giáo dục: mọi sinh viên đều có gia sư riêng, bất kể hoàn cảnh kinh tế</li>
+              <li><span class="il-icon">🏘️</span> Xóa bỏ khoảng cách thành thị - nông thôn: SV tỉnh lẻ có cùng chất lượng hỗ trợ như SV Hà Nội/HCM</li>
+              <li><span class="il-icon">♿</span> Accessibility: voice tutor cho người khiếm thị, adaptive UI cho người khuyết tật</li>
+              <li><span class="il-icon">🧠</span> Giảm stress học tập: AI kiên nhẫn, không phán xét, giảm áp lực tâm lý cho SV</li>
+              <li><span class="il-icon">📉</span> Giảm tỷ lệ bỏ học: phát hiện sớm SV gặp khó khăn, can thiệp kịp thời</li>
+              <li><span class="il-icon">🎓</span> CSR: Tặng gói Premium miễn phí cho SV có hoàn cảnh khó khăn (1000 suất/năm)</li>
+            </ul>
+            <p style="margin-top:16px"><strong>Phát triển bền vững:</strong> Đóng góp trực tiếp vào SDG 4 (Quality Education – giáo dục chất lượng cho tất cả), SDG 10 (Reduced Inequalities – giảm bất bình đẳng), và SDG 8 (Decent Work – nâng cao năng lực lao động tương lai).</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Roadmap -->
-    <section id="roadmap" class="content-section">
+    <section id="roadmap" class="p-section">
       <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">07</span>
-            <h3>Kế hoạch phát triển</h3>
-            <p>Roadmap từ ý tưởng đến thị trường</p>
-          </div>
-          <div class="section-content">
+        <div class="p-grid">
+          <div class="p-sidebar"><span class="section-tag">07</span><h3>Kế hoạch phát triển</h3><p>Roadmap từ ý tưởng đến thị trường</p></div>
+          <div class="p-content">
             <div class="roadmap">
-              <div class="roadmap-item">
-                <div class="roadmap-phase">
-                  Phase 1 – Nghiên cứu & Prototype
-                </div>
-                <div class="roadmap-title">Xây dựng mẫu thử</div>
-                <div class="roadmap-desc">
-                  Nghiên cứu learning style models, xây dựng bài test VARK, tích
-                  hợp LLM API, prototype chatbot cơ bản với adaptive content.
-                </div>
-                <div class="roadmap-time">Tháng 1 – Tháng 3/2026</div>
+              <div class="rm-item">
+                <div class="rm-phase">Phase 1 – Prototype</div>
+                <div class="rm-title">MVP AI Tutor cho 1 môn học</div>
+                <div class="rm-desc">Xây dựng AI tutor cho môn Toán Cao cấp (môn khó nhất năm 1). Fine-tune LLM trên giáo trình VN. Implement spaced repetition cơ bản. Test với 100 SV tại 1 trường ĐH. Đo lường: điểm thi cải thiện bao nhiêu?</div>
+                <div class="rm-time">Tháng 1 – Tháng 3/2026 (3 tháng)</div>
               </div>
-              <div class="roadmap-item">
-                <div class="roadmap-phase">Phase 2 – MVP</div>
-                <div class="roadmap-title">Minimum Viable Product</div>
-                <div class="roadmap-desc">
-                  App hoàn chỉnh với 3 môn học (Toán, Lý, Tiếng Anh). Test với
-                  200 sinh viên tại 2 trường ĐH. Thu thập feedback, cải thiện
-                  model.
-                </div>
-                <div class="roadmap-time">Tháng 4 – Tháng 7/2026</div>
+              <div class="rm-item">
+                <div class="rm-phase">Phase 2 – MVP</div>
+                <div class="rm-title">Mở rộng 5 môn + Adaptive Engine</div>
+                <div class="rm-desc">Thêm: Vật lý, Hóa học, Lập trình, Tiếng Anh. Hoàn thiện adaptive learning engine (VARK detection). Knowledge gap detection. Mobile app (PWA). Pilot 500 SV tại 3 trường. Launch freemium public beta.</div>
+                <div class="rm-time">Tháng 4 – Tháng 7/2026 (4 tháng)</div>
               </div>
-              <div class="roadmap-item">
-                <div class="roadmap-phase">Phase 3 – Launch</div>
-                <div class="roadmap-title">Ra mắt thị trường</div>
-                <div class="roadmap-desc">
-                  Mở rộng 10+ môn học. Marketing tại các trường ĐH TP.HCM. Triển
-                  khai gói B2B pilot với 3-5 trường.
-                </div>
-                <div class="roadmap-time">Tháng 8 – Tháng 12/2026</div>
+              <div class="rm-item">
+                <div class="rm-phase">Phase 3 – Launch</div>
+                <div class="rm-title">Ra mắt chính thức + B2B</div>
+                <div class="rm-desc">Launch app trên App Store/Google Play. Triển khai B2B license cho 5-10 trường ĐH. Voice tutor tiếng Việt. Peer matching feature. Marketing campaign TikTok/Instagram. Target: 50K users, 4K premium.</div>
+                <div class="rm-time">Tháng 8 – Tháng 12/2026 (5 tháng)</div>
               </div>
-              <div class="roadmap-item">
-                <div class="roadmap-phase">Phase 4 – Scale</div>
-                <div class="roadmap-title">Mở rộng quy mô</div>
-                <div class="roadmap-desc">
-                  Mở rộng toàn quốc. Thêm tính năng study group AI, peer
-                  learning. Tìm kiếm đầu tư Series A.
-                </div>
-                <div class="roadmap-time">2027</div>
+              <div class="rm-item">
+                <div class="rm-phase">Phase 4 – Scale</div>
+                <div class="rm-title">Mở rộng toàn quốc + Corporate</div>
+                <div class="rm-desc">Mở rộng 20+ môn học. B2B 20 trường ĐH. Thêm segment: học sinh lớp 11-12 ôn thi ĐH. Corporate training pilot. Bắt đầu localize cho thị trường Đông Nam Á (Thái Lan, Indonesia). Gọi vốn Series A.</div>
+                <div class="rm-time">Năm 2027</div>
               </div>
             </div>
           </div>
@@ -417,39 +722,30 @@
       </div>
     </section>
 
-    <!-- Team -->
-    <section id="team" class="content-section">
+    <!-- Năng lực nhóm -->
+    <section class="p-section">
       <div class="container">
-        <div class="section-grid">
-          <div class="section-label-col">
-            <span class="label">08</span>
-            <h3>Năng lực nhóm</h3>
-          </div>
-          <div class="section-content">
-            <div class="team-note">
-              <p>
-                Phần thông tin nhóm sẽ được cập nhật sau khi nhóm xác nhận thành
-                viên.<br /><span class="highlight"
-                  >Vui lòng liên hệ nhóm trưởng để bổ sung thông tin.</span
-                >
-              </p>
+        <div class="p-grid">
+          <div class="p-sidebar"><span class="section-tag">08</span><h3>Năng lực tổ chức thực hiện</h3><p>Điểm mạnh của nhóm dự án</p></div>
+          <div class="p-content">
+            <div class="team-placeholder">
+              <p>📋 Phần thông tin chi tiết về thành viên nhóm sẽ được cập nhật sau khi xác nhận đội hình.</p>
+              <p style="margin-top:12px"><span class="hl">Nhóm cần bổ sung:</span> Thông tin sơ bộ thành viên, kinh nghiệm đổi mới sáng tạo, điểm mạnh đội ngũ, cố vấn (nếu có).</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <footer class="footer">
+    <!-- Footer -->
+    <footer class="p-footer">
       <div class="container">
-        <p class="footer-brand">◆ INNOSTAR 2026</p>
+        <p class="p-footer-brand">◆ INNOSTAR 2026</p>
         <p>AI Peer Tutor – Gia sư AI cá nhân hóa theo phong cách học</p>
-        <p class="footer-sub">
-          <a href="../index.html" style="color: var(--blue)"
-            >← Quay lại trang chính</a
-          >
-        </p>
+        <p><a href="../index.html" class="p-footer-back">← Quay lại trang chính</a></p>
       </div>
     </footer>
+
     <script src="../js/main.js"></script>
   </body>
 </html>
